@@ -5,13 +5,13 @@ namespace vehicle_insurance_backend.DataCtxt
 {
     public class DataContext : DbContext
     {
-        public DbSet<CustomerInformation> CustomerInformation { get; set; }
-        public DbSet<VehicleInformation> VehicleInformation { get; set; }
-        public DbSet<InsuranceProcess> InsuranceProcess { get; set; }
-        public DbSet<Estimate> Estimates { get; set; }
-        public DbSet<CompanyExpenses> CompanyExpenses { get; set; }
-        public DbSet<CompanyBillingPolicy> CompanyBillingPolicy { get; set; }
-        public DbSet<ClaimDetails> ClaimDetails { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<Advertisement> advertisements { get; set; }
+        public DbSet<Billing> billings { get; set; }
+        public DbSet<CustomerInsurance> customerInsurances { get; set; }
+        public DbSet<CustomerSupport> customerSupports { get; set; }
+        public DbSet<Insurance> insurances { get; set; }
+        public DbSet<Vehicle> vehicles { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
     }

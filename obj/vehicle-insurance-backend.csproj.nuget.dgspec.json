@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\vehicle-insurance-backend.csproj": {}
+    "D:\\ProjectSem3\\Vehicle-insurance-backend\\vehicle-insurance-backend.csproj": {}
   },
   "projects": {
-    "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\vehicle-insurance-backend.csproj": {
+    "D:\\ProjectSem3\\Vehicle-insurance-backend\\vehicle-insurance-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\vehicle-insurance-backend.csproj",
+        "projectUniqueName": "D:\\ProjectSem3\\Vehicle-insurance-backend\\vehicle-insurance-backend.csproj",
         "projectName": "vehicle-insurance-backend",
-        "projectPath": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\vehicle-insurance-backend.csproj",
-        "packagesPath": "C:\\Users\\ngoch\\.nuget\\packages\\",
-        "outputPath": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\obj\\",
+        "projectPath": "D:\\ProjectSem3\\Vehicle-insurance-backend\\vehicle-insurance-backend.csproj",
+        "packagesPath": "C:\\Users\\trhuy\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjectSem3\\Vehicle-insurance-backend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ngoch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\trhuy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,6 +51,10 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.8, )"
             },
@@ -92,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

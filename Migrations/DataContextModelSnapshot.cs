@@ -22,7 +22,7 @@ namespace vehicle_insurance_backend.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("vehicle_insurance_backend.models.ClaimDetails", b =>
+            modelBuilder.Entity("vehicle_insurance_backend.models.Advertisement", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,44 +30,42 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ClaimNumber")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<int>("ClaimableAmount")
-                        .HasColumnType("int");
+                    b.Property<string>("CustomerEmail")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("CustomerName")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
-                    b.Property<string>("DateOfAccident")
+                    b.Property<string>("CustomerPhone")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(15)
+                        .HasColumnType("varchar(15)");
 
-                    b.Property<int>("InsuredAmount")
+                    b.Property<int>("Deleted")
                         .HasColumnType("int");
 
-                    b.Property<string>("PlaceOfAccident")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<string>("PolicyEndDate")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("PolicyNumber")
+                    b.Property<int>("Type")
                         .HasColumnType("int");
 
-                    b.Property<string>("PolicyStartDate")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("ClaimDetails");
+                    b.ToTable("advertisements");
                 });
 
-            modelBuilder.Entity("vehicle_insurance_backend.models.CompanyBillingPolicy", b =>
+            modelBuilder.Entity("vehicle_insurance_backend.models.Billing", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -75,63 +73,32 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Amount")
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Deleted")
                         .HasColumnType("int");
 
-                    b.Property<int>("BillNo")
-                        .HasColumnType("int");
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<string>("CustomerAddProve")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<int?>("CustomerInformationCustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("CustomerPhoneNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Date")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("PolicyNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("VehicleBodyNumber")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleEngineNumber")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleModel")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("VehicleRate")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerInformationCustomerId");
+                    b.HasIndex("UserId");
 
-                    b.ToTable("CompanyBillingPolicy");
+                    b.ToTable("billings");
                 });
 
-            modelBuilder.Entity("vehicle_insurance_backend.models.CompanyExpenses", b =>
+            modelBuilder.Entity("vehicle_insurance_backend.models.CustomerInsurance", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -139,243 +106,282 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AmountOfExpense")
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Deleted")
                         .HasColumnType("int");
 
-                    b.Property<string>("DateOfExpense")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<string>("TypeOfExpense")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<DateTime>("ExpireDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("InsuranceId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("VehicleId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("CompanyExpenses");
+                    b.HasIndex("InsuranceId");
+
+                    b.HasIndex("VehicleId");
+
+                    b.ToTable("customerInsurances");
                 });
 
-            modelBuilder.Entity("vehicle_insurance_backend.models.CustomerInformation", b =>
+            modelBuilder.Entity("vehicle_insurance_backend.models.CustomerSupport", b =>
                 {
-                    b.Property<int>("CustomerId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CustomerId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CustomerAdd")
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Deleted")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(500)
+                        .HasColumnType("varchar(500)");
 
-                    b.Property<string>("CustomerName")
+                    b.Property<string>("Place")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("CustomerPhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("CustomerId");
-
-                    b.ToTable("CustomerInformation");
-                });
-
-            modelBuilder.Entity("vehicle_insurance_backend.models.Estimate", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("Type")
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("CustomerPhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("EstimateNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("VehicleModel")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehiclePolicyType")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("VehicleRate")
-                        .HasColumnType("int");
-
-                    b.Property<string>("VehicleWarranty")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("Estimates");
-                });
-
-            modelBuilder.Entity("vehicle_insurance_backend.models.InsuranceProcess", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CustomerAdd")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("CustomerAddProve")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int?>("CustomerInformationCustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("CustomerPhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("CustommerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PolicyDate")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("PolicyDuration")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PolicyNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("VehicleBodyNumber")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleEngineNumber")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleModel")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("VehicleNumber")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VehicleRate")
-                        .HasColumnType("int");
-
-                    b.Property<string>("VehicleVersion")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleWarranty")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CustomerInformationCustomerId");
-
-                    b.ToTable("InsuranceProcess");
-                });
-
-            modelBuilder.Entity("vehicle_insurance_backend.models.VehicleInformation", b =>
-                {
                     b.Property<int>("VehicleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VehicleId");
+
+                    b.ToTable("customerSupports");
+                });
+
+            modelBuilder.Entity("vehicle_insurance_backend.models.Insurance", b =>
+                {
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("VehicleId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("VehicleBodyNumber")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<string>("VehicleEngineNumber")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleModel")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("VehicleName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("VehicleNumber")
+                    b.Property<int>("Deleted")
                         .HasColumnType("int");
 
-                    b.Property<int>("VehicleRate")
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<int>("Duration")
                         .HasColumnType("int");
 
-                    b.Property<string>("VehicleVersion")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("Name")
+                        .HasColumnType("int");
 
-                    b.Property<string>("VehiclesOwnerName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
 
-                    b.HasKey("VehicleId");
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
 
-                    b.ToTable("VehicleInformation");
+                    b.HasKey("Id");
+
+                    b.ToTable("insurances");
                 });
 
-            modelBuilder.Entity("vehicle_insurance_backend.models.CompanyBillingPolicy", b =>
+            modelBuilder.Entity("vehicle_insurance_backend.models.User", b =>
                 {
-                    b.HasOne("vehicle_insurance_backend.models.CustomerInformation", "CustomerInformation")
-                        .WithMany()
-                        .HasForeignKey("CustomerInformationCustomerId");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Navigation("CustomerInformation");
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Deleted")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Fullname")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("varchar(15)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<int>("Verified")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("users");
                 });
 
-            modelBuilder.Entity("vehicle_insurance_backend.models.Estimate", b =>
+            modelBuilder.Entity("vehicle_insurance_backend.models.Vehicle", b =>
                 {
-                    b.HasOne("vehicle_insurance_backend.models.CustomerInformation", "Customer")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CarNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Deleted")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Version")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("vehicles");
+                });
+
+            modelBuilder.Entity("vehicle_insurance_backend.models.Billing", b =>
+                {
+                    b.HasOne("vehicle_insurance_backend.models.User", "User")
                         .WithMany()
-                        .HasForeignKey("CustomerId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Customer");
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("vehicle_insurance_backend.models.InsuranceProcess", b =>
+            modelBuilder.Entity("vehicle_insurance_backend.models.CustomerInsurance", b =>
                 {
-                    b.HasOne("vehicle_insurance_backend.models.CustomerInformation", "CustomerInformation")
+                    b.HasOne("vehicle_insurance_backend.models.Insurance", "Insurance")
                         .WithMany()
-                        .HasForeignKey("CustomerInformationCustomerId");
+                        .HasForeignKey("InsuranceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("CustomerInformation");
+                    b.HasOne("vehicle_insurance_backend.models.Vehicle", "Vehicle")
+                        .WithMany()
+                        .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Insurance");
+
+                    b.Navigation("Vehicle");
+                });
+
+            modelBuilder.Entity("vehicle_insurance_backend.models.CustomerSupport", b =>
+                {
+                    b.HasOne("vehicle_insurance_backend.models.Vehicle", "Vehicle")
+                        .WithMany()
+                        .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Vehicle");
+                });
+
+            modelBuilder.Entity("vehicle_insurance_backend.models.Vehicle", b =>
+                {
+                    b.HasOne("vehicle_insurance_backend.models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }
