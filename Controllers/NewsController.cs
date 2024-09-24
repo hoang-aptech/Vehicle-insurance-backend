@@ -12,47 +12,47 @@ namespace vehicle_insurance_backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VehiclesController : ControllerBase
+    public class NewsController : ControllerBase
     {
         private readonly DataContext _context;
 
-        public VehiclesController(DataContext context)
+        public NewsController(DataContext context)
         {
             _context = context;
         }
 
-        // GET: api/Vehicles
+        // GET: api/News
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vehicle>>> Getvehicles()
+        public async Task<ActionResult<IEnumerable<New>>> GetNew()
         {
-            return await _context.vehicles.ToListAsync();
+            return await _context.New.ToListAsync();
         }
 
-        // GET: api/Vehicles/5
+        // GET: api/News/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Vehicle>> GetVehicle(int id)
+        public async Task<ActionResult<New>> GetNew(int id)
         {
-            var vehicle = await _context.vehicles.FindAsync(id);
+            var @new = await _context.New.FindAsync(id);
 
-            if (vehicle == null)
+            if (@new == null)
             {
                 return NotFound();
             }
 
-            return vehicle;
+            return @new;
         }
 
-        // PUT: api/Vehicles/5
+        // PUT: api/News/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutVehicle(int id, Vehicle vehicle)
+        public async Task<IActionResult> PutNew(int id, New @new)
         {
-            if (id != vehicle.id)
+            if (id != @new.id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(vehicle).State = EntityState.Modified;
+            _context.Entry(@new).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace vehicle_insurance_backend.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VehicleExists(id))
+                if (!NewExists(id))
                 {
                     return NotFound();
                 }
@@ -73,36 +73,36 @@ namespace vehicle_insurance_backend.Controllers
             return NoContent();
         }
 
-        // POST: api/Vehicles
+        // POST: api/News
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Vehicle>> PostVehicle(Vehicle vehicle)
+        public async Task<ActionResult<New>> PostNew(New @new)
         {
-            _context.vehicles.Add(vehicle);
+            _context.New.Add(@new);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetVehicle", new { id = vehicle.id }, vehicle);
+            return CreatedAtAction("GetNew", new { id = @new.id }, @new);
         }
 
-        // DELETE: api/Vehicles/5
+        // DELETE: api/News/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteVehicle(int id)
+        public async Task<IActionResult> DeleteNew(int id)
         {
-            var vehicle = await _context.vehicles.FindAsync(id);
-            if (vehicle == null)
+            var @new = await _context.New.FindAsync(id);
+            if (@new == null)
             {
                 return NotFound();
             }
 
-            _context.vehicles.Remove(vehicle);
+            _context.New.Remove(@new);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool VehicleExists(int id)
+        private bool NewExists(int id)
         {
-            return _context.vehicles.Any(e => e.id == id);
+            return _context.New.Any(e => e.id == id);
         }
     }
 }

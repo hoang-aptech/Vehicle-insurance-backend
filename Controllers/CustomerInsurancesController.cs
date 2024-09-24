@@ -47,7 +47,7 @@ namespace vehicle_insurance_backend.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCustomerInsurance(int id, CustomerInsurance customerInsurance)
         {
-            if (id != customerInsurance.Id)
+            if (id != customerInsurance.id)
             {
                 return BadRequest();
             }
@@ -81,7 +81,7 @@ namespace vehicle_insurance_backend.Controllers
             _context.customerInsurances.Add(customerInsurance);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCustomerInsurance", new { id = customerInsurance.Id }, customerInsurance);
+            return CreatedAtAction("GetCustomerInsurance", new { id = customerInsurance.id }, customerInsurance);
         }
 
         // DELETE: api/CustomerInsurances/5
@@ -102,7 +102,7 @@ namespace vehicle_insurance_backend.Controllers
 
         private bool CustomerInsuranceExists(int id)
         {
-            return _context.customerInsurances.Any(e => e.Id == id);
+            return _context.customerInsurances.Any(e => e.id == id);
         }
     }
 }

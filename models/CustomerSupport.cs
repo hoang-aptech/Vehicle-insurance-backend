@@ -1,38 +1,38 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vehicle_insurance_backend.models
 {
+    [Table("CustomerSupport")]
     public class CustomerSupport
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [Required]
-        public SupportType Type { get; set; }
+        public SupportType type { get; set; }
 
         [StringLength(500)]
-        public string Description { get; set; }
+        public string description { get; set; }
 
         [StringLength(255)]
-        public string Place { get; set; }
+        public string place { get; set; }
 
         [Required]
-        public SupportStatus Deleted { get; set; }
+        public Status deleted { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
-
-        [Required]
-        public DateTime CreatedAt { get; set; }
+        public DateTime? deletedAt { get; set; }
 
         [Required]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime createdAt { get; set; }
 
-        public Vehicle? Vehicle { get; set; }
+        [Required]
+        public DateTime updatedAt { get; set; }
+
+        public Vehicle? vehicle { get; set; }
         [Required]
         [ForeignKey("Vehicle")]
-        public int VehicleId { get; set; }
+        public int vehicleId { get; set; }
     }
 
     public enum SupportType
@@ -42,11 +42,5 @@ namespace vehicle_insurance_backend.models
         TechnicalIssue,
         Inquiry,
         Other
-    }
-
-    public enum SupportStatus
-    {
-        Yes,
-        No
     }
 }

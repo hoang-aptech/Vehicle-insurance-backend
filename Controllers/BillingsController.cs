@@ -47,7 +47,7 @@ namespace vehicle_insurance_backend.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBilling(int id, Billing billing)
         {
-            if (id != billing.Id)
+            if (id != billing.id)
             {
                 return BadRequest();
             }
@@ -81,7 +81,7 @@ namespace vehicle_insurance_backend.Controllers
             _context.billings.Add(billing);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetBilling", new { id = billing.Id }, billing);
+            return CreatedAtAction("GetBilling", new { id = billing.id }, billing);
         }
 
         // DELETE: api/Billings/5
@@ -102,7 +102,7 @@ namespace vehicle_insurance_backend.Controllers
 
         private bool BillingExists(int id)
         {
-            return _context.billings.Any(e => e.Id == id);
+            return _context.billings.Any(e => e.id == id);
         }
     }
 }

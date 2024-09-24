@@ -1,55 +1,50 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vehicle_insurance_backend.models
 {
+    [Table("User")]
     public class User
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Username { get; set; }
+        public string username { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Fullname { get; set; }
+        public string fullname { get; set; }
 
         [Required]
         [StringLength(255)]
-        public string Password { get; set; }
+        public string password { get; set; }
 
         [Required]
-        public UserStatus Verified { get; set; }
+        public Status verified { get; set; }
 
         [StringLength(255)]
-        public string Address { get; set; }
+        public string address { get; set; }
 
         [Phone]
         [StringLength(15)]
-        public string Phone { get; set; }
+        public string phone { get; set; }
 
         [Required]
         [EmailAddress]
         [StringLength(100)]
-        public string Email { get; set; }
+        public string email { get; set; }
 
         [Required]
-        public UserStatus Deleted { get; set; }
+        public Status deleted { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
-
-        [Required]
-        public DateTime CreatedAt { get; set; }
+        public DateTime? deletedAt { get; set; }
 
         [Required]
-        public DateTime UpdatedAt { get; set; }
-    }
-    public enum UserStatus
-    {
-        Yes,
-        No
+        public DateTime createdAt { get; set; }
+
+        [Required]
+        public DateTime updatedAt { get; set; }
     }
 }

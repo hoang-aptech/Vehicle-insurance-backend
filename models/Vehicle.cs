@@ -1,47 +1,47 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vehicle_insurance_backend.models
 {
+    [Table("Vehicle")]
     public class Vehicle
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Name { get; set; }
+        public string name { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Model { get; set; }
+        public string model { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Version { get; set; }
+        public string version { get; set; }
 
         [Required]
-        public VehicleType Type { get; set; }
+        public VehicleType type { get; set; }
 
         [Required]
         [StringLength(20)]
-        public string CarNumber { get; set; }
+        public string carNumber { get; set; }
 
         [Required]
-        public VehicleStatus Deleted { get; set; }
+        public Status deleted { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
-
-        [Required]
-        public DateTime CreatedAt { get; set; }
+        public DateTime? deletedAt { get; set; }
 
         [Required]
-        public DateTime UpdatedAt { get; set; }
-        public User? User { get; set; }
+        public DateTime createdAt { get; set; }
+
+        [Required]
+        public DateTime updatedAt { get; set; }
+        public User? user { get; set; }
         [Required]
         [ForeignKey("User")]
-        public int UserId { get; set; }
+        public int userId { get; set; }
     }
 
     public enum VehicleType
@@ -50,10 +50,5 @@ namespace vehicle_insurance_backend.models
         Motorbike
     }
 
-    public enum VehicleStatus
-    {
-        Yes,
-        No
-    }
 
 }

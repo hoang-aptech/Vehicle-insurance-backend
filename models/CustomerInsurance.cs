@@ -1,45 +1,39 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vehicle_insurance_backend.models
 {
+    [Table("CustomerInsurance")]
     public class CustomerInsurance
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [Required]
-        public DateTime StartDate { get; set; }
+        public DateTime startDate { get; set; }
 
         [Required]
-        public DateTime ExpireDate { get; set; }
+        public DateTime expireDate { get; set; }
 
         [Required]
-        public InsuranceStatus Deleted { get; set; }
+        public Status deleted { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
-
-        [Required]
-        public DateTime CreatedAt { get; set; }
+        public DateTime? deletedAt { get; set; }
 
         [Required]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime createdAt { get; set; }
 
-        public Vehicle? Vehicle { get; set; }
+        [Required]
+        public DateTime updatedAt { get; set; }
+
+        public Vehicle? vehicle { get; set; }
         [Required]
         [ForeignKey("Vehicle")]
-        public int VehicleId { get; set; }
-        public Insurance? Insurance { get; set; }
+        public int vehicleId { get; set; }
+        public Insurance? insurance { get; set; }
         [Required]
         [ForeignKey("Insurance")]
-        public int InsuranceId { get; set; }
-    }
-
-    public enum InsuranceStatus
-    {
-        Yes,
-        No
+        public int insuranceId { get; set; }
     }
 
 }

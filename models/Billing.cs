@@ -1,38 +1,32 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vehicle_insurance_backend.models
 {
+    [Table("Billing")]
     public class Billing
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [Required]
         [Column(TypeName = "decimal(18, 2)")]
-        public double Price { get; set; }
+        public double price { get; set; }
 
         [Required]
-        public BillingStatus Deleted { get; set; }
+        public Status deleted { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
-
-        [Required]
-        public DateTime CreatedAt { get; set; }
+        public DateTime? deletedAt { get; set; }
 
         [Required]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime createdAt { get; set; }
+
+        [Required]
+        public DateTime updatedAt { get; set; }
 
         public User? User { get; set; }
         [Required]
         [ForeignKey("User")]
         public int UserId { get; set; }
-    }
-
-    public enum BillingStatus
-    {
-        Yes,
-        No
     }
 }

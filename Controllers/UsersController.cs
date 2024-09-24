@@ -47,7 +47,7 @@ namespace vehicle_insurance_backend.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (id != user.Id)
+            if (id != user.id)
             {
                 return BadRequest();
             }
@@ -81,7 +81,7 @@ namespace vehicle_insurance_backend.Controllers
             _context.users.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            return CreatedAtAction("GetUser", new { id = user.id }, user);
         }
 
         // DELETE: api/Users/5
@@ -102,7 +102,7 @@ namespace vehicle_insurance_backend.Controllers
 
         private bool UserExists(int id)
         {
-            return _context.users.Any(e => e.Id == id);
+            return _context.users.Any(e => e.id == id);
         }
     }
 }

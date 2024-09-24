@@ -47,7 +47,7 @@ namespace vehicle_insurance_backend.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAdvertisement(int id, Advertisement advertisement)
         {
-            if (id != advertisement.Id)
+            if (id != advertisement.id)
             {
                 return BadRequest();
             }
@@ -81,7 +81,7 @@ namespace vehicle_insurance_backend.Controllers
             _context.advertisements.Add(advertisement);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetAdvertisement", new { id = advertisement.Id }, advertisement);
+            return CreatedAtAction("GetAdvertisement", new { id = advertisement.id }, advertisement);
         }
 
         // DELETE: api/Advertisements/5
@@ -102,7 +102,7 @@ namespace vehicle_insurance_backend.Controllers
 
         private bool AdvertisementExists(int id)
         {
-            return _context.advertisements.Any(e => e.Id == id);
+            return _context.advertisements.Any(e => e.id == id);
         }
     }
 }

@@ -14,5 +14,33 @@ namespace vehicle_insurance_backend.DataCtxt
         public DbSet<Vehicle> vehicles { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Advertisement>().Property(a => a.type).HasConversion<string>();
+
+            modelBuilder.Entity<Advertisement>().Property(a => a.deleted).HasConversion<string>();
+
+            modelBuilder.Entity<Billing>().Property(a => a.deleted).HasConversion<string>();
+
+            modelBuilder.Entity<CustomerInsurance>().Property(a => a.deleted).HasConversion<string>();
+
+            modelBuilder.Entity<CustomerSupport>().Property(a => a.deleted).HasConversion<string>();
+
+            modelBuilder.Entity<CustomerSupport>().Property(a => a.type).HasConversion<string>();
+
+            modelBuilder.Entity<Insurance>().Property(a => a.deleted).HasConversion<string>();
+
+            modelBuilder.Entity<Insurance>().Property(a => a.name).HasConversion<string>();
+
+            modelBuilder.Entity<User>().Property(a => a.deleted).HasConversion<string>();
+
+            modelBuilder.Entity<User>().Property(a => a.verified).HasConversion<string>();
+
+            modelBuilder.Entity<Vehicle>().Property(a => a.deleted).HasConversion<string>();
+
+        }
+        public DbSet<vehicle_insurance_backend.models.New> New { get; set; } = default!;
     }
 }

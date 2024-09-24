@@ -1,42 +1,36 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vehicle_insurance_backend.models
 {
+    [Table("Insurance")]
     public class Insurance
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [Required]
-        public InsuranceName Name { get; set; }
+        public Type name { get; set; }
 
         [StringLength(255)]
-        public string Description { get; set; }
+        public string description { get; set; }
 
         [Required]
-        public int Duration { get; set; }
+        public int duration { get; set; }
 
         [Required]
         [Column(TypeName = "decimal(18, 2)")]
-        public double Price { get; set; }
+        public double price { get; set; }
 
         [Required]
-        public InsuranceStatus Deleted { get; set; }
+        public Status deleted { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
-
-        [Required]
-        public DateTime CreatedAt { get; set; }
+        public DateTime? deletedAt { get; set; }
 
         [Required]
-        public DateTime UpdatedAt { get; set; }
-    }
+        public DateTime createdAt { get; set; }
 
-    public enum InsuranceName
-    {
-        Car,
-        Motorbike
+        [Required]
+        public DateTime updatedAt { get; set; }
     }
 }

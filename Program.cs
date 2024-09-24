@@ -1,6 +1,6 @@
-
-using vehicle_insurance_backend.DataCtxt;
+﻿
 using Microsoft.EntityFrameworkCore;
+using vehicle_insurance_backend.DataCtxt;
 
 namespace vehicle_insurance_backend
 {
@@ -21,7 +21,7 @@ namespace vehicle_insurance_backend
             {
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
             });
-            builder.Services.AddCors(options =>
+            var myPolicy = builder.Services.AddCors(options =>
             {
                 options.AddDefaultPolicy(builder =>
                 {
