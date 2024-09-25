@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using vehicle_insurance_backend.DataCtxt;
 using vehicle_insurance_backend.models;
+using Microsoft.EntityFrameworkCore;
 
 namespace vehicle_insurance_backend.Controllers
 {
@@ -25,14 +26,24 @@ namespace vehicle_insurance_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CustomerInsurance>>> GetcustomerInsurances()
         {
-            return await _context.customerInsurances.ToListAsync();
+            // Join với bảng Vehicle và User
+            var customerInsurances = await _context.customerInsurances
+                .Include(ci => ci.Vehicle)    // Join với bảng Vehicle
+                .ThenInclude(v => v.User)     // Tiếp tục join với bảng User
+                .ToListAsync();               // Lấy tất cả các bản ghi
+
+            return customerInsurances;
         }
 
         // GET: api/CustomerInsurances/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CustomerInsurance>> GetCustomerInsurance(int id)
         {
-            var customerInsurance = await _context.customerInsurances.FindAsync(id);
+            // Join với bảng Vehicle và User
+            var customerInsurance = await _context.customerInsurances
+                .Include(ci => ci.Vehicle) // Join với bảng Vehicle
+                .ThenInclude(v => v.User)  // Sau đó join tiếp với bảng User
+                .FirstOrDefaultAsync(ci => ci.id == id); // Lấy bản ghi theo id
 
             if (customerInsurance == null)
             {

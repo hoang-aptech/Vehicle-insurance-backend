@@ -38,7 +38,7 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         public DateTime updatedAt { get; set; }
-        public User? user { get; set; }
+        public User? User { get; set; }
         [Required]
         [ForeignKey("User")]
         public int userId { get; set; }

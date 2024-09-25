@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/uZ4v4sq7t+Hq2w28sD431kIie8pzAtW1O+j5ixHk/v52cTF9IzPfSKGcQlOLp3JtnW9ckqpsKGU+LpFukps3w==",
+  "dgSpecHash": "wYmZm5Pu5dM=",
   "success": true,
-  "projectFilePath": "D:\\ProjectSem3\\Vehicle-insurance-backend\\vehicle-insurance-backend.csproj",
+  "projectFilePath": "C:\\Users\\trhuy\\OneDrive\\Tài liệu\\Study\\ProjectSem3\\Vehicle-insurance-backend\\vehicle-insurance-backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\trhuy\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\trhuy\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

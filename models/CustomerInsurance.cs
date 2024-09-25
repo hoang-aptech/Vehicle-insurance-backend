@@ -26,11 +26,11 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
-        public Vehicle? vehicle { get; set; }
+        public Vehicle? Vehicle { get; set; }
         [Required]
         [ForeignKey("Vehicle")]
         public int vehicleId { get; set; }
-        public Insurance? insurance { get; set; }
+        public Insurance? Insurance { get; set; }
         [Required]
         [ForeignKey("Insurance")]
         public int insuranceId { get; set; }
