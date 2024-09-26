@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\controllers\\insurancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\insurancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\models\\insurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\insurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\controllers\\advertisementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\advertisementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\models\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\controllers\\customerinsurancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\customerinsurancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\customerinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\models\\insurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\insurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -36,10 +48,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\models\\customersupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\customersupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\models\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\models\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,20 +66,12 @@
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\controllers\\insurancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\insurancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\controllers\\customersupportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\customersupportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\controllers\\billingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\billingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\controllers\\advertisementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\advertisementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|c:\\users\\trhuy\\onedrive\\ta\u0300i li\u00EA\u0323u\\study\\projectsem3\\vehicle-insurance-backend\\datactxt\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,58 +106,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Microsoft.PackageDependencyResolution.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAjwBgBAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-09-25T04:00:09.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomerInsurance.cs",
-              "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\CustomerInsurance.cs",
-              "RelativeDocumentMoniker": "models\\CustomerInsurance.cs",
-              "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\CustomerInsurance.cs",
-              "RelativeToolTip": "models\\CustomerInsurance.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAwwCAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T06:20:03.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Insurance.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\Insurance.cs",
               "RelativeDocumentMoniker": "models\\Insurance.cs",
               "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\Insurance.cs",
               "RelativeToolTip": "models\\Insurance.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA6wCQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T06:20:28.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CustomerSupport.cs",
-              "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\CustomerSupport.cs",
-              "RelativeDocumentMoniker": "models\\CustomerSupport.cs",
-              "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\CustomerSupport.cs",
-              "RelativeToolTip": "models\\CustomerSupport.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAmwAUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T06:20:05.493Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Billing.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\Billing.cs",
               "RelativeDocumentMoniker": "models\\Billing.cs",
@@ -169,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -177,12 +139,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T06:31:18.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T06:31:18.582Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "CustomerInsurancesController.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\CustomerInsurancesController.cs",
               "RelativeDocumentMoniker": "Controllers\\CustomerInsurancesController.cs",
@@ -195,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Vehicle.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\Vehicle.cs",
               "RelativeDocumentMoniker": "models\\Vehicle.cs",
@@ -203,12 +164,11 @@
               "RelativeToolTip": "models\\Vehicle.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAcwCgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T06:21:50.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T06:21:50.052Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\User.cs",
               "RelativeDocumentMoniker": "models\\User.cs",
@@ -216,12 +176,11 @@
               "RelativeToolTip": "models\\User.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAcwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T06:21:44.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T06:21:44.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "VehiclesController.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\VehiclesController.cs",
               "RelativeDocumentMoniker": "Controllers\\VehiclesController.cs",
@@ -229,24 +188,86 @@
               "RelativeToolTip": "Controllers\\VehiclesController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T08:13:49.872Z",
+              "WhenOpened": "2024-09-24T08:13:49.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Advertisement.cs",
+              "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\Advertisement.cs",
+              "RelativeDocumentMoniker": "models\\Advertisement.cs",
+              "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\Advertisement.cs",
+              "RelativeToolTip": "models\\Advertisement.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAowDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T06:16:58.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 2,
+              "Title": "AdvertisementsController.cs",
+              "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\AdvertisementsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdvertisementsController.cs",
+              "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\AdvertisementsController.cs",
+              "RelativeToolTip": "Controllers\\AdvertisementsController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T08:06:00.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "InsurancesController.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\InsurancesController.cs",
               "RelativeDocumentMoniker": "Controllers\\InsurancesController.cs",
               "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\InsurancesController.cs",
               "RelativeToolTip": "Controllers\\InsurancesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwBUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T08:10:05.888Z"
+              "WhenOpened": "2024-09-24T08:10:05.888Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
+              "Title": "CustomerSupport.cs",
+              "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\CustomerSupport.cs",
+              "RelativeDocumentMoniker": "models\\CustomerSupport.cs",
+              "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\CustomerSupport.cs",
+              "RelativeToolTip": "models\\CustomerSupport.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAmwAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T06:20:05.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomerInsurance.cs",
+              "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\CustomerInsurance.cs",
+              "RelativeDocumentMoniker": "models\\CustomerInsurance.cs",
+              "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\CustomerInsurance.cs",
+              "RelativeToolTip": "models\\CustomerInsurance.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwCAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T06:20:03.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAjwBgBAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-09-25T04:00:09.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "NewsController.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\NewsController.cs",
               "RelativeDocumentMoniker": "Controllers\\NewsController.cs",
@@ -258,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
@@ -267,18 +288,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T08:13:24.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Advertisement.cs",
-              "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\Advertisement.cs",
-              "RelativeDocumentMoniker": "models\\Advertisement.cs",
-              "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\Advertisement.cs",
-              "RelativeToolTip": "models\\Advertisement.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA9wAUAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T06:16:58.005Z"
             },
             {
               "$type": "Document",
@@ -294,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CustomerSupportsController.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\CustomerSupportsController.cs",
               "RelativeDocumentMoniker": "Controllers\\CustomerSupportsController.cs",
@@ -306,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "BillingsController.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\BillingsController.cs",
               "RelativeDocumentMoniker": "Controllers\\BillingsController.cs",
@@ -318,19 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AdvertisementsController.cs",
-              "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\AdvertisementsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdvertisementsController.cs",
-              "ToolTip": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\Controllers\\AdvertisementsController.cs",
-              "RelativeToolTip": "Controllers\\AdvertisementsController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T08:06:00.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "New.cs",
               "DocumentMoniker": "C:\\Users\\trhuy\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\Study\\ProjectSem3\\Vehicle-insurance-backend\\models\\New.cs",
               "RelativeDocumentMoniker": "models\\New.cs",

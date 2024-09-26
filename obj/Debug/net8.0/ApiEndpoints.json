@@ -545,6 +545,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "vehicle_insurance_backend.Controllers.InsurancesController",
+    "Method": "GetInsuranceByType",
+    "RelativePath": "api/Insurances/type/{type}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[vehicle_insurance_backend.models.Insurance, vehicle-insurance-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "vehicle_insurance_backend.Controllers.NewsController",
     "Method": "GetNew",
     "RelativePath": "api/News",
