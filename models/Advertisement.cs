@@ -24,10 +24,10 @@ namespace vehicle_insurance_backend.models
         public string customerEmail { get; set; }
 
         [Required]
-        public Type type { get; set; }
+        public string type { get; set; }
 
         [Required]
-        public Status deleted { get; set; }
+        public Boolean deleted { get; set; }
 
         public DateTime? deletedAt { get; set; }
 
@@ -36,18 +36,6 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         public DateTime updatedAt { get; set; }
-    }
-
-    public enum Type
-    {
-        Car,
-        Motorbike
-    }
-
-    public enum Status
-    {
-        Yes,
-        No
     }
 
 }

@@ -14,7 +14,12 @@ namespace vehicle_insurance_backend.models
         public double price { get; set; }
 
         [Required]
-        public Status deleted { get; set; }
+        public int customerinsuranceId { get; set; }
+        public CustomerInsurance? CustomerInsurance { get; set; }
+
+
+        [Required]
+        public Boolean deleted { get; set; }
 
         public DateTime? deletedAt { get; set; }
 
@@ -24,9 +29,5 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
-        public User? User { get; set; }
-        [Required]
-        [ForeignKey("User")]
-        public int UserId { get; set; }
     }
 }

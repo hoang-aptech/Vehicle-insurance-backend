@@ -22,14 +22,14 @@ namespace vehicle_insurance_backend.models
         public string version { get; set; }
 
         [Required]
-        public VehicleType type { get; set; }
+        public string type { get; set; }
 
         [Required]
         [StringLength(20)]
         public string carNumber { get; set; }
 
         [Required]
-        public Status deleted { get; set; }
+        public Boolean deleted { get; set; }
 
         public DateTime? deletedAt { get; set; }
 
@@ -38,17 +38,8 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         public DateTime updatedAt { get; set; }
-        public User? User { get; set; }
         [Required]
-        [ForeignKey("User")]
         public int userId { get; set; }
+        public User? User { get; set; }
     }
-
-    public enum VehicleType
-    {
-        Car,
-        Motorbike
-    }
-
-
 }

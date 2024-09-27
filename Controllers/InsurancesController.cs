@@ -42,28 +42,6 @@ namespace vehicle_insurance_backend.Controllers
             return insurance;
         }
 
-        [HttpGet("type/{type}")]
-        public async Task<ActionResult<IEnumerable<Insurance>>> GetInsuranceByType(vehicle_insurance_backend.models.Type type)
-        {
-            var insurances = await _context.insurances
-                .Where(i => i.name == type) // Truy vấn theo enum Type
-                .Select(i => new
-                {
-                    i.name,
-                    i.description,
-                    i.price
-                })
-                .ToListAsync();
-
-            if (insurances == null || !insurances.Any())
-            {
-                return NotFound("No insurance packages found for this type.");
-            }
-
-            return Ok(insurances);
-        }
-
-
         // PUT: api/Insurances/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
