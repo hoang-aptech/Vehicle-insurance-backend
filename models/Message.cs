@@ -18,12 +18,6 @@ namespace vehicle_insurance_backend.models
         public int customersupportId { get; set; }
         public CustomerSupport? CustomerSupport { get; set; }
 
-        public Role role { get; set; }
-
-        public enum Role
-        {
-            Employee,
-            User
-        }
+        public string role { get; set; }
     }
 }

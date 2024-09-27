@@ -763,3 +763,27 @@ C:\Users\trhuy\OneDrive\Tài liệu\Study\ProjectSem3\Vehicle-insurance-backen
 C:\Users\trhuy\OneDrive\Tài liệu\Study\ProjectSem3\Vehicle-insurance-backend\obj\Debug\net8.0\vehicle-.4816BDA9.Up2Date
 C:\Users\trhuy\OneDrive\Tài liệu\Study\ProjectSem3\Vehicle-insurance-backend\obj\Debug\net8.0\vehicle-insurance-backend.genruntimeconfig.cache
 C:\Users\trhuy\OneDrive\Tài liệu\Study\ProjectSem3\Vehicle-insurance-backend\obj\Debug\net8.0\ref\vehicle-insurance-backend.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Azure.Core.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Azure.Identity.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Aptech\Do_an\Sem3\VehicleInsuranceManagement\vehicle-insurance-backend\obj\Debug\net8.0\vehicle-insurance-backend.sourcelink.json
