@@ -10,7 +10,7 @@ namespace vehicle_insurance_backend.models
         public int id { get; set; }
 
         [Required]
-        public SupportType type { get; set; }
+        public string type { get; set; }
 
         [StringLength(500)]
         public string description { get; set; }
@@ -19,7 +19,17 @@ namespace vehicle_insurance_backend.models
         public string place { get; set; }
 
         [Required]
-        public Status deleted { get; set; }
+        public int vehicleId { get; set; }
+        public Vehicle? vehicle { get; set; }
+
+        [Required]
+        public int userId { get; set; }
+        public User? User { get; set; }
+
+        public string status { get; set; }
+
+        [Required]
+        public Boolean deleted { get; set; }
 
         public DateTime? deletedAt { get; set; }
 
@@ -29,10 +39,6 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
-        public Vehicle? vehicle { get; set; }
-        [Required]
-        [ForeignKey("Vehicle")]
-        public int vehicleId { get; set; }
     }
 
     public enum SupportType

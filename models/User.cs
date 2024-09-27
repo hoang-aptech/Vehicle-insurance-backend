@@ -22,7 +22,7 @@ namespace vehicle_insurance_backend.models
         public string password { get; set; }
 
         [Required]
-        public Status verified { get; set; }
+        public Boolean verified { get; set; }
 
         [StringLength(255)]
         public string address { get; set; }
@@ -36,8 +36,10 @@ namespace vehicle_insurance_backend.models
         [StringLength(100)]
         public string email { get; set; }
 
+        public string Role { get; set; }
+
         [Required]
-        public Status deleted { get; set; }
+        public Boolean deleted { get; set; }
 
         public DateTime? deletedAt { get; set; }
 
@@ -46,5 +48,7 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         public DateTime updatedAt { get; set; }
+
+        
     }
 }

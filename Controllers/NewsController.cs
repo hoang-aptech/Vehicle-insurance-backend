@@ -23,16 +23,16 @@ namespace vehicle_insurance_backend.Controllers
 
         // GET: api/News
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<New>>> GetNew()
+        public async Task<ActionResult<IEnumerable<New>>> Getnews()
         {
-            return await _context.New.ToListAsync();
+            return await _context.news.ToListAsync();
         }
 
         // GET: api/News/5
         [HttpGet("{id}")]
         public async Task<ActionResult<New>> GetNew(int id)
         {
-            var @new = await _context.New.FindAsync(id);
+            var @new = await _context.news.FindAsync(id);
 
             if (@new == null)
             {
@@ -78,7 +78,7 @@ namespace vehicle_insurance_backend.Controllers
         [HttpPost]
         public async Task<ActionResult<New>> PostNew(New @new)
         {
-            _context.New.Add(@new);
+            _context.news.Add(@new);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetNew", new { id = @new.id }, @new);
@@ -88,13 +88,13 @@ namespace vehicle_insurance_backend.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteNew(int id)
         {
-            var @new = await _context.New.FindAsync(id);
+            var @new = await _context.news.FindAsync(id);
             if (@new == null)
             {
                 return NotFound();
             }
 
-            _context.New.Remove(@new);
+            _context.news.Remove(@new);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -102,7 +102,7 @@ namespace vehicle_insurance_backend.Controllers
 
         private bool NewExists(int id)
         {
-            return _context.New.Any(e => e.id == id);
+            return _context.news.Any(e => e.id == id);
         }
     }
 }

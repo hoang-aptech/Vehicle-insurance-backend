@@ -16,7 +16,7 @@ namespace vehicle_insurance_backend.models
         public DateTime expireDate { get; set; }
 
         [Required]
-        public Status deleted { get; set; }
+        public Boolean deleted { get; set; }
 
         public DateTime? deletedAt { get; set; }
 
@@ -25,15 +25,12 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         public DateTime updatedAt { get; set; }
-
+        [Required]
+        public int vehicleId { get; set; }
         public Vehicle? Vehicle { get; set; }
         [Required]
-        [ForeignKey("Vehicle")]
-        public int vehicleId { get; set; }
-        public Insurance? Insurance { get; set; }
-        [Required]
-        [ForeignKey("Insurance")]
         public int insuranceId { get; set; }
+        public Insurance? Insurance { get; set; }
     }
 
 }

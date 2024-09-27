@@ -48,9 +48,8 @@ namespace vehicle_insurance_backend.Migrations
                         .HasMaxLength(15)
                         .HasColumnType("varchar(15)");
 
-                    b.Property<string>("deleted")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("deleted")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("deletedAt")
                         .HasColumnType("datetime(6)");
@@ -75,15 +74,14 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("createdAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("deleted")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("customerinsuranceId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("deleted")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("deletedAt")
                         .HasColumnType("datetime(6)");
@@ -96,7 +94,7 @@ namespace vehicle_insurance_backend.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("customerinsuranceId");
 
                     b.ToTable("Billing");
                 });
@@ -112,9 +110,8 @@ namespace vehicle_insurance_backend.Migrations
                     b.Property<DateTime>("createdAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("deleted")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("deleted")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("deletedAt")
                         .HasColumnType("datetime(6)");
@@ -151,12 +148,14 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<int?>("Userid")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("createdAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("deleted")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("deleted")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("deletedAt")
                         .HasColumnType("datetime(6)");
@@ -166,10 +165,17 @@ namespace vehicle_insurance_backend.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("varchar(500)");
 
+                    b.Property<int>("employeeId")
+                        .HasColumnType("int");
+
                     b.Property<string>("place")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
+
+                    b.Property<string>("status")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("type")
                         .IsRequired()
@@ -182,6 +188,8 @@ namespace vehicle_insurance_backend.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("id");
+
+                    b.HasIndex("Userid");
 
                     b.HasIndex("vehicleId");
 
@@ -199,9 +207,8 @@ namespace vehicle_insurance_backend.Migrations
                     b.Property<DateTime>("createdAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("deleted")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("deleted")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("deletedAt")
                         .HasColumnType("datetime(6)");
@@ -227,6 +234,34 @@ namespace vehicle_insurance_backend.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Insurance");
+                });
+
+            modelBuilder.Entity("vehicle_insurance_backend.models.Message", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int>("customersupportId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("message")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("role")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("time")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("customersupportId");
+
+                    b.ToTable("messages");
                 });
 
             modelBuilder.Entity("vehicle_insurance_backend.models.New", b =>
@@ -265,6 +300,10 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("address")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -273,9 +312,8 @@ namespace vehicle_insurance_backend.Migrations
                     b.Property<DateTime>("createdAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("deleted")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("deleted")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("deletedAt")
                         .HasColumnType("datetime(6)");
@@ -308,9 +346,8 @@ namespace vehicle_insurance_backend.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("verified")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("verified")
+                        .HasColumnType("tinyint(1)");
 
                     b.HasKey("id");
 
@@ -333,9 +370,8 @@ namespace vehicle_insurance_backend.Migrations
                     b.Property<DateTime>("createdAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("deleted")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("deleted")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<DateTime?>("deletedAt")
                         .HasColumnType("datetime(6)");
@@ -350,8 +386,9 @@ namespace vehicle_insurance_backend.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
-                    b.Property<int>("type")
-                        .HasColumnType("int");
+                    b.Property<string>("type")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("updatedAt")
                         .HasColumnType("datetime(6)");
@@ -373,54 +410,71 @@ namespace vehicle_insurance_backend.Migrations
 
             modelBuilder.Entity("vehicle_insurance_backend.models.Billing", b =>
                 {
-                    b.HasOne("vehicle_insurance_backend.models.User", "User")
+                    b.HasOne("vehicle_insurance_backend.models.CustomerInsurance", "CustomerInsurance")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("customerinsuranceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("CustomerInsurance");
                 });
 
             modelBuilder.Entity("vehicle_insurance_backend.models.CustomerInsurance", b =>
                 {
-                    b.HasOne("vehicle_insurance_backend.models.Insurance", "insurance")
+                    b.HasOne("vehicle_insurance_backend.models.Insurance", "Insurance")
                         .WithMany()
                         .HasForeignKey("insuranceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("vehicle_insurance_backend.models.Vehicle", "vehicle")
+                    b.HasOne("vehicle_insurance_backend.models.Vehicle", "Vehicle")
                         .WithMany()
                         .HasForeignKey("vehicleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("insurance");
+                    b.Navigation("Insurance");
 
-                    b.Navigation("vehicle");
+                    b.Navigation("Vehicle");
                 });
 
             modelBuilder.Entity("vehicle_insurance_backend.models.CustomerSupport", b =>
                 {
+                    b.HasOne("vehicle_insurance_backend.models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("Userid");
+
                     b.HasOne("vehicle_insurance_backend.models.Vehicle", "vehicle")
                         .WithMany()
                         .HasForeignKey("vehicleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("User");
+
                     b.Navigation("vehicle");
+                });
+
+            modelBuilder.Entity("vehicle_insurance_backend.models.Message", b =>
+                {
+                    b.HasOne("vehicle_insurance_backend.models.CustomerSupport", "CustomerSupport")
+                        .WithMany()
+                        .HasForeignKey("customersupportId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CustomerSupport");
                 });
 
             modelBuilder.Entity("vehicle_insurance_backend.models.Vehicle", b =>
                 {
-                    b.HasOne("vehicle_insurance_backend.models.User", "user")
+                    b.HasOne("vehicle_insurance_backend.models.User", "User")
                         .WithMany()
                         .HasForeignKey("userId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("user");
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

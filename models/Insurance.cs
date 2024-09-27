@@ -10,7 +10,7 @@ namespace vehicle_insurance_backend.models
         public int id { get; set; }
 
         [Required]
-        public Type name { get; set; }
+        public string name { get; set; }
 
         [StringLength(255)]
         public string description { get; set; }
@@ -23,7 +23,7 @@ namespace vehicle_insurance_backend.models
         public double price { get; set; }
 
         [Required]
-        public Status deleted { get; set; }
+        public Boolean deleted { get; set; }
 
         public DateTime? deletedAt { get; set; }
 
