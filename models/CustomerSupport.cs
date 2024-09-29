@@ -39,6 +39,15 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
+        public CustomerSupport()
+        {
+            var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));
+
+            status = "Active";
+            createdAt = now;
+            updatedAt = now;
+        }
+
     }
 
     public enum SupportType

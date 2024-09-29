@@ -31,6 +31,14 @@ namespace vehicle_insurance_backend.models
         [Required]
         public int insuranceId { get; set; }
         public Insurance? Insurance { get; set; }
+
+        public CustomerInsurance()
+        {
+            var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));
+
+            createdAt = now;
+            updatedAt = now;
+        }
     }
 
 }

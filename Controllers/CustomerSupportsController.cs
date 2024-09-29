@@ -28,6 +28,32 @@ namespace vehicle_insurance_backend.Controllers
             return await _context.customerSupports.ToListAsync();
         }
 
+        [HttpGet("by-user/{userId}")]
+        public IActionResult GetCustomerSupportByUserId(int userId)
+        {
+            var query = _context.customerSupports
+                .Include(cs => cs.vehicle)
+                .ThenInclude(v => v.User)
+                .Where(cs => cs.vehicle.userId == userId).Select(cs => new
+                {
+                    Id = cs.id,
+                    Type = cs.type,
+                    Description = cs.description,
+                    Place = cs.place,
+                    VehicleName = cs.vehicle.name,
+                    CreatedAt = cs.createdAt,
+                });
+
+            var customerSupports = query.ToList();
+
+            if (customerSupports == null || !customerSupports.Any())
+            {
+                return NotFound("No customer support found for this user.");
+            }
+
+            return Ok(customerSupports);
+        }
+
         // GET: api/CustomerSupports/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CustomerSupport>> GetCustomerSupport(int id)

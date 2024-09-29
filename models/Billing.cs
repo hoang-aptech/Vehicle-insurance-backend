@@ -29,5 +29,13 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
+        public Billing()
+        {
+            var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));
+
+            createdAt = now;
+            updatedAt = now;
+        }
+
     }
 }

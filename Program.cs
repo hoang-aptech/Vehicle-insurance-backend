@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using vehicle_insurance_backend.DataCtxt;
+using vehicle_insurance_backend.Hubs;
 
 namespace vehicle_insurance_backend
 {
@@ -12,6 +13,7 @@ namespace vehicle_insurance_backend
             var connectionString = builder.Configuration.GetConnectionString("Sem3Conn");
 
             // Add services to the container.
+            builder.Services.AddSignalR();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -21,11 +23,11 @@ namespace vehicle_insurance_backend
             {
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
             });
-            var myPolicy = builder.Services.AddCors(options =>
+            builder.Services.AddCors(options =>
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod();
+                    builder.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
                 });
             });
 
@@ -46,6 +48,8 @@ namespace vehicle_insurance_backend
 
 
             app.MapControllers();
+
+            app.MapHub<ChatHub>("/chat");
 
             app.Run();
         }

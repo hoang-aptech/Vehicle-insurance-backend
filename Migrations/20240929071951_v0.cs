@@ -27,7 +27,8 @@ namespace vehicle_insurance_backend.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     customerEmail = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    type = table.Column<string>(type: "enum('Car','Motorbike')", nullable: false),
+                    type = table.Column<string>(type: "enum('Car','Motorbike')", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     deleted = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     deletedAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
                     createdAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
@@ -45,12 +46,13 @@ namespace vehicle_insurance_backend.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    name = table.Column<string>(type: "longtext", nullable: false)
+                    name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    description = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
+                    description = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     duration = table.Column<int>(type: "int", nullable: false),
                     price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    isNew = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     deleted = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     deletedAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
                     createdAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
@@ -70,10 +72,14 @@ namespace vehicle_insurance_backend.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     name = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    description = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
+                    description = table.Column<string>(type: "longtext", maxLength: 255, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     image_path = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    deleted = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    deletedAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    createdAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    updatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -100,7 +106,8 @@ namespace vehicle_insurance_backend.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     email = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Role = table.Column<string>(type: "enum('Admin','User','Employee')", nullable: false),
+                    Role = table.Column<string>(type: "enum('Admin','User','Employee')", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     deleted = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     deletedAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
                     createdAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
@@ -124,14 +131,15 @@ namespace vehicle_insurance_backend.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     version = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    type = table.Column<string>(type: "enum('Car','Motorbike')", nullable: false),
-                    carNumber = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
+                    type = table.Column<string>(type: "enum('Car','Motorbike')", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    LicensePlate = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    userId = table.Column<int>(type: "int", nullable: false),
                     deleted = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     deletedAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
                     createdAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    updatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    userId = table.Column<int>(type: "int", nullable: false)
+                    updatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -184,14 +192,16 @@ namespace vehicle_insurance_backend.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    type = table.Column<string>(type: "enum('Maintenance','Repair','TechnicalIssue','Inquiry','Other')", nullable: false),
+                    type = table.Column<string>(type: "enum('Maintenance','Repair','TechnicalIssue','Inquiry','Other')", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     description = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     place = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     vehicleId = table.Column<int>(type: "int", nullable: false),
-                    userId = table.Column<int>(type: "int", nullable: true),
-                    status = table.Column<string>(type: "enum('Active','Inactive')", nullable: false),
+                    userId = table.Column<int>(type: "int", nullable: false),
+                    status = table.Column<string>(type: "enum('Active','Inactive')", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     deleted = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     deletedAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
                     createdAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
@@ -204,7 +214,8 @@ namespace vehicle_insurance_backend.Migrations
                         name: "FK_CustomerSupport_User_userId",
                         column: x => x.userId,
                         principalTable: "User",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_CustomerSupport_Vehicle_vehicleId",
                         column: x => x.vehicleId,
@@ -246,10 +257,15 @@ namespace vehicle_insurance_backend.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     time = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    message = table.Column<string>(type: "longtext", nullable: false)
+                    message = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     customersupportId = table.Column<int>(type: "int", nullable: false),
-                    role = table.Column<int>(type: "enum('Employee','User')", nullable: false)
+                    role = table.Column<string>(type: "enum('Employee','User')", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    deleted = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    deletedAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    createdAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    updatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -279,9 +295,9 @@ namespace vehicle_insurance_backend.Migrations
                 column: "vehicleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CustomerSupport_Userid",
+                name: "IX_CustomerSupport_userId",
                 table: "CustomerSupport",
-                column: "Userid");
+                column: "userId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CustomerSupport_vehicleId",
