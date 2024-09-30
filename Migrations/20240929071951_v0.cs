@@ -99,6 +99,7 @@ namespace vehicle_insurance_backend.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     password = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    avatar = table.Column<string>(type: "longblog", nullable: false).Annotation("MySql:CharSet", "utf8mb4"),
                     verified = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     address = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
