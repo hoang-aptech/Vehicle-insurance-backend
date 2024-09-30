@@ -22,7 +22,7 @@ namespace vehicle_insurance_backend.models
         public string password { get; set; }
 
         [Required]
-        public string avatar { get; set; }
+        public byte[] avatar { get; set; }
 
         [Required]
         public Boolean verified { get; set; }
