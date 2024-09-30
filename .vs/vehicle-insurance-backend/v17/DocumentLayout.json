@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\models\\new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\controllers\\customersupportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\customersupportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\migrations\\20240929071951_v0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,16 +55,8 @@
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:vehicle-insurance-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\models\\new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\controllers\\customersupportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|solutionrelative:controllers\\customersupportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{955D342E-C100-4946-BA72-6EFD7905C705}|vehicle-insurance-backend.csproj|d:\\aptech\\do_an\\sem3\\vehicleinsurancemanagement\\vehicle-insurance-backend\\models\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,63 +86,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NewsController.cs",
+              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "Controllers\\NewsController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwB8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T08:46:58.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwB8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T08:39:57.697Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\DataCtxt\\DataContext.cs",
-              "RelativeDocumentMoniker": "DataCtxt\\DataContext.cs",
-              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\DataCtxt\\DataContext.cs",
-              "RelativeToolTip": "DataCtxt\\DataContext.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T01:01:10.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ChatHub.cs",
-              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Hubs\\ChatHub.cs",
-              "RelativeDocumentMoniker": "Hubs\\ChatHub.cs",
-              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Hubs\\ChatHub.cs",
-              "RelativeToolTip": "Hubs\\ChatHub.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAIwCUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T09:08:22.758Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Insurance.cs",
-              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\Insurance.cs",
-              "RelativeDocumentMoniker": "models\\Insurance.cs",
-              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\Insurance.cs",
-              "RelativeToolTip": "models\\Insurance.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T07:03:24.229Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "CustomerSupport.cs",
-              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\CustomerSupport.cs",
-              "RelativeDocumentMoniker": "models\\CustomerSupport.cs",
-              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\CustomerSupport.cs",
-              "RelativeToolTip": "models\\CustomerSupport.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAiwC0AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T07:03:49.977Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -146,20 +132,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\User.cs",
               "RelativeDocumentMoniker": "models\\User.cs",
-              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\User.cs*",
-              "RelativeToolTip": "models\\User.cs*",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAVAAAA",
+              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\User.cs",
+              "RelativeToolTip": "models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T06:58:57.238Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "20240929071951_v0.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Migrations\\20240929071951_v0.cs",
               "RelativeDocumentMoniker": "Migrations\\20240929071951_v0.cs",
@@ -172,7 +158,81 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerSupportsController.cs",
+              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\CustomerSupportsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomerSupportsController.cs",
+              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\CustomerSupportsController.cs",
+              "RelativeToolTip": "Controllers\\CustomerSupportsController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAUwC4AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T03:43:26.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "New.cs",
+              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\New.cs",
+              "RelativeDocumentMoniker": "models\\New.cs",
+              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\New.cs",
+              "RelativeToolTip": "models\\New.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T06:59:29.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomerSupport.cs",
+              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\CustomerSupport.cs",
+              "RelativeDocumentMoniker": "models\\CustomerSupport.cs",
+              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\CustomerSupport.cs",
+              "RelativeToolTip": "models\\CustomerSupport.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAiwC0AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T07:03:49.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Insurance.cs",
+              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\Insurance.cs",
+              "RelativeDocumentMoniker": "models\\Insurance.cs",
+              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\Insurance.cs",
+              "RelativeToolTip": "models\\Insurance.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T07:03:24.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\ChatHub.cs",
+              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "Hubs\\ChatHub.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAIwCUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T09:08:22.758Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\DataCtxt\\DataContext.cs",
+              "RelativeDocumentMoniker": "DataCtxt\\DataContext.cs",
+              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\DataCtxt\\DataContext.cs",
+              "RelativeToolTip": "DataCtxt\\DataContext.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T01:01:10.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "vehicle-insurance-backend.csproj",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\vehicle-insurance-backend.csproj",
               "RelativeDocumentMoniker": "vehicle-insurance-backend.csproj",
@@ -184,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "MessagesController.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\MessagesController.cs",
               "RelativeDocumentMoniker": "Controllers\\MessagesController.cs",
@@ -196,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Advertisement.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\Advertisement.cs",
               "RelativeDocumentMoniker": "models\\Advertisement.cs",
@@ -208,31 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CustomerSupportsController.cs",
-              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\CustomerSupportsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CustomerSupportsController.cs",
-              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\CustomerSupportsController.cs",
-              "RelativeToolTip": "Controllers\\CustomerSupportsController.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAUwC4AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T03:43:26.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "New.cs",
-              "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\New.cs",
-              "RelativeDocumentMoniker": "models\\New.cs",
-              "ToolTip": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\New.cs",
-              "RelativeToolTip": "models\\New.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T06:59:29.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Message.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\Message.cs",
               "RelativeDocumentMoniker": "models\\Message.cs",
@@ -244,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Billing.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\Billing.cs",
               "RelativeDocumentMoniker": "models\\Billing.cs",
@@ -256,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "CustomerInsurance.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\CustomerInsurance.cs",
               "RelativeDocumentMoniker": "models\\CustomerInsurance.cs",
@@ -268,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Vehicle.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\models\\Vehicle.cs",
               "RelativeDocumentMoniker": "models\\Vehicle.cs",
@@ -280,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "VehiclesController.cs",
               "DocumentMoniker": "D:\\Aptech\\Do_an\\Sem3\\VehicleInsuranceManagement\\vehicle-insurance-backend\\Controllers\\VehiclesController.cs",
               "RelativeDocumentMoniker": "Controllers\\VehiclesController.cs",

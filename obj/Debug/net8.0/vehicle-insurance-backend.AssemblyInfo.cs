@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vehicle-insurance-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05d87476752e51798a4452ad1ea5439caa6d55ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4259ad255afc2335ff0f24c8996828e526aa22ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("vehicle-insurance-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vehicle-insurance-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
