@@ -88,16 +88,34 @@ namespace vehicle_insurance_backend.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomerInsurance(int id)
         {
-            var customerInsurance = await _context.customerInsurances.FindAsync(id);
-            if (customerInsurance == null)
+            try
             {
-                return NotFound();
+                var customerInsurance = await _context.customerInsurances.FindAsync(id);
+                if (customerInsurance == null)
+                {
+                    return NotFound();
+                }
+
+                _context.customerInsurances.Remove(customerInsurance);
+                await _context.SaveChangesAsync();
+
+                return NoContent();
             }
+            catch (DbUpdateException ex)
+            {
+                // Check if it's a foreign key constraint violation
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("foreign key constraint"))
+                {
+                    // Provide a user-friendly message with the affected tables
+                    return BadRequest(new
+                    {
+                        message = "Unable to delete the CustomerInsurance because this CustomerInsurance is associated with other data.",
+                        details = "This CustomerInsurance is linked to Billing. Please remove or update the related data before deleting."
+                    });
+                }
 
-            _context.customerInsurances.Remove(customerInsurance);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+                return StatusCode(500, new { message = "An unexpected error occurred while deleting." });
+            }
         }
 
         private bool CustomerInsuranceExists(int id)
