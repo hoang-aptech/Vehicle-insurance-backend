@@ -545,6 +545,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "vehicle_insurance_backend.Controllers.InsurancesController",
+    "Method": "CreatePaymentUrl",
+    "RelativePath": "api/Insurances/pay/{insuranceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insuranceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "vehicle_insurance_backend.Controllers.MessagesController",
     "Method": "Getmessages",
     "RelativePath": "api/Messages",
