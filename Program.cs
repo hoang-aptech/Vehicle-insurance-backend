@@ -25,7 +25,7 @@ namespace vehicle_insurance_backend
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod();
+                    builder.WithOrigins("http://localhost:3000", "https://a38a-210-245-54-82.ngrok-free.app").AllowAnyHeader().AllowAnyMethod();
                 });
             });
 
@@ -36,6 +36,8 @@ namespace vehicle_insurance_backend
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
             }
 
             app.UseHttpsRedirection();
