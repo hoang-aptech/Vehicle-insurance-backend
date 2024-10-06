@@ -3,26 +3,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vehicle_insurance_backend.models
 {
-    [Table("Insurance")]
-    public class Insurance
+    public class InsurancePackage
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string name { get; set; }
-
-        public string description { get; set; }
-
-        public string clause { get; set; }
+        public string Name { get; set; }
 
         [Required]
-        public Boolean isNew { get; set; }
+        public int Duration { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string type { get; set; }
+        [Column(TypeName = "decimal(18, 2)")]
+        public double Price { get; set; }
+
+        public int InsuranceId { get; set; }
+
+        public Insurance? Insurance { get; set; }
 
         [Required]
         public Boolean deleted { get; set; }
@@ -35,7 +34,7 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
-        public Insurance()
+        public InsurancePackage()
         {
             var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));
 
