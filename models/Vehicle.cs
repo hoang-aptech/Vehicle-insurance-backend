@@ -26,7 +26,11 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         [StringLength(20)]
-        public string carNumber { get; set; }
+        public string LicensePlate { get; set; }
+
+        [Required]
+        public int userId { get; set; }
+        public User? User { get; set; }
 
         [Required]
         public Boolean deleted { get; set; }
@@ -38,8 +42,13 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         public DateTime updatedAt { get; set; }
-        [Required]
-        public int userId { get; set; }
-        public User? User { get; set; }
+
+        public Vehicle()
+        {
+            var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));
+
+            createdAt = now;
+            updatedAt = now;
+        }
     }
 }

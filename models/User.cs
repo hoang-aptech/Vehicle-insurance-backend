@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection.Metadata;
 
 namespace vehicle_insurance_backend.models
 {
@@ -20,6 +21,9 @@ namespace vehicle_insurance_backend.models
         [Required]
         [StringLength(255)]
         public string password { get; set; }
+
+        [Required]
+        public byte[] avatar { get; set; }
 
         [Required]
         public Boolean verified { get; set; }
@@ -49,6 +53,14 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
-        
+        public User()
+        {
+            var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));
+
+            createdAt = now;
+            updatedAt = now;
+        }
+
+
     }
 }

@@ -28,6 +28,13 @@ namespace vehicle_insurance_backend.Controllers
             return await _context.news.ToListAsync();
         }
 
+        // GET:api/News/deleted
+        [HttpGet("deleted")]
+        public async Task<ActionResult<IEnumerable<New>>> GetnewsDeleted()
+        {
+            return await _context.news.Where(n => n.deleted == true).ToListAsync();
+        }
+
         // GET: api/News/5
         [HttpGet("{id}")]
         public async Task<ActionResult<New>> GetNew(int id)

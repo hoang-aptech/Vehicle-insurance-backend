@@ -10,9 +10,9 @@ namespace vehicle_insurance_backend.models
         public int id { get; set; }
 
         [Required]
+        [StringLength(50)]
         public string name { get; set; }
 
-        [StringLength(255)]
         public string description { get; set; }
 
         [Required]
@@ -20,7 +20,10 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         [Column(TypeName = "decimal(18, 2)")]
-        public double price { get; set; }
+        public decimal price { get; set; }
+
+        [Required]
+        public Boolean isNew { get; set; }
 
         [Required]
         public Boolean deleted { get; set; }
@@ -32,5 +35,13 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         public DateTime updatedAt { get; set; }
+
+        public Insurance()
+        {
+            var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));
+
+            createdAt = now;
+            updatedAt = now;
+        }
     }
 }
