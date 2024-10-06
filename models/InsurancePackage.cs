@@ -1,24 +1,27 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vehicle_insurance_backend.models
 {
-    public class Message
+    public class InsurancePackage
     {
         [Key]
-        public int id {  get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public DateTime time { get; set; }
-        [Required, StringLength(255)]
-        public string message { get; set; }
+        [StringLength(50)]
+        public string Name { get; set; }
 
         [Required]
-        public int customersupportId { get; set; }
-        public CustomerSupport? CustomerSupport { get; set; }
+        public int Duration { get; set; }
 
-        public string role { get; set; }
+        [Required]
+        [Column(TypeName = "decimal(18, 2)")]
+        public double Price { get; set; }
+
+        public int InsuranceId { get; set; }
+
+        public Insurance? Insurance { get; set; }
 
         [Required]
         public Boolean deleted { get; set; }
@@ -31,7 +34,7 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
-        public Message()
+        public InsurancePackage()
         {
             var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));
 

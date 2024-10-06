@@ -28,6 +28,32 @@ namespace vehicle_insurance_backend.Controllers
             return await _context.customerSupports.ToListAsync();
         }
 
+        [HttpGet("by-user/{userId}")]
+        public IActionResult GetCustomerSupportByUserId(int userId)
+        {
+            var query = _context.customerSupports
+                .Include(cs => cs.vehicle)
+                .ThenInclude(v => v.User)
+                .Where(cs => cs.vehicle.userId == userId).Select(cs => new
+                {
+                    Id = cs.id,
+                    Type = cs.type,
+                    Description = cs.description,
+                    Place = cs.place,
+                    VehicleName = cs.vehicle.name,
+                    CreatedAt = cs.createdAt,
+                });
+
+            var customerSupports = query.ToList();
+
+            if (customerSupports == null || !customerSupports.Any())
+            {
+                return NotFound("No customer support found for this user.");
+            }
+
+            return Ok(customerSupports);
+        }
+
         // GET: api/CustomerSupports/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CustomerSupport>> GetCustomerSupport(int id)
@@ -88,16 +114,34 @@ namespace vehicle_insurance_backend.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomerSupport(int id)
         {
-            var customerSupport = await _context.customerSupports.FindAsync(id);
-            if (customerSupport == null)
+            try
             {
-                return NotFound();
+                var customerSupport = await _context.customerSupports.FindAsync(id);
+                if (customerSupport == null)
+                {
+                    return NotFound();
+                }
+
+                _context.customerSupports.Remove(customerSupport);
+                await _context.SaveChangesAsync();
+
+                return NoContent();
             }
+            catch (DbUpdateException ex)
+            {
+                // Check if it's a foreign key constraint violation
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("foreign key constraint"))
+                {
+                    // Provide a user-friendly message with the affected tables
+                    return BadRequest(new
+                    {
+                        message = "Unable to delete the CustomerSupport because this CustomerSupport is associated with other data.",
+                        details = "This CustomerSupport is linked to Messages. Please remove or update the related data before deleting."
+                    });
+                }
 
-            _context.customerSupports.Remove(customerSupport);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+                return StatusCode(500, new { message = "An unexpected error occurred while deleting." });
+            }
         }
 
         private bool CustomerSupportExists(int id)

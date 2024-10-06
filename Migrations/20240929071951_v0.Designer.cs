@@ -12,7 +12,7 @@ using vehicle_insurance_backend.DataCtxt;
 namespace vehicle_insurance_backend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240927034936_v0")]
+    [Migration("20240929071951_v0")]
     partial class v0
     {
         /// <inheritdoc />
@@ -151,9 +151,6 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<int?>("Userid")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("createdAt")
                         .HasColumnType("datetime(6)");
 
@@ -167,9 +164,6 @@ namespace vehicle_insurance_backend.Migrations
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("varchar(500)");
-
-                    b.Property<int>("employeeId")
-                        .HasColumnType("int");
 
                     b.Property<string>("place")
                         .IsRequired()
@@ -187,12 +181,15 @@ namespace vehicle_insurance_backend.Migrations
                     b.Property<DateTime>("updatedAt")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<int>("userId")
+                        .HasColumnType("int");
+
                     b.Property<int>("vehicleId")
                         .HasColumnType("int");
 
                     b.HasKey("id");
 
-                    b.HasIndex("Userid");
+                    b.HasIndex("userId");
 
                     b.HasIndex("vehicleId");
 
@@ -226,7 +223,8 @@ namespace vehicle_insurance_backend.Migrations
 
                     b.Property<string>("name")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<decimal>("price")
                         .HasColumnType("decimal(18, 2)");
@@ -247,17 +245,30 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<DateTime>("createdAt")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<int>("customersupportId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("deleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime?>("deletedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("message")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("role")
-                        .HasColumnType("int");
+                    b.Property<string>("role")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("time")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("updatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("id");
@@ -275,6 +286,15 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<DateTime>("createdAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("deleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime?>("deletedAt")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("description")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -289,6 +309,9 @@ namespace vehicle_insurance_backend.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
+
+                    b.Property<DateTime>("updatedAt")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("id");
 
@@ -365,7 +388,7 @@ namespace vehicle_insurance_backend.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<string>("carNumber")
+                    b.Property<string>("LicensePlate")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("varchar(20)");
@@ -445,7 +468,9 @@ namespace vehicle_insurance_backend.Migrations
                 {
                     b.HasOne("vehicle_insurance_backend.models.User", "User")
                         .WithMany()
-                        .HasForeignKey("Userid");
+                        .HasForeignKey("userId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("vehicle_insurance_backend.models.Vehicle", "vehicle")
                         .WithMany()

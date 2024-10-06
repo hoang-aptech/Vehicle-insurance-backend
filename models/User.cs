@@ -23,6 +23,9 @@ namespace vehicle_insurance_backend.models
         public string password { get; set; }
 
         [Required]
+        public byte[] avatar { get; set; }
+
+        [Required]
         public Boolean verified { get; set; }
 
         [StringLength(255)]
@@ -50,7 +53,14 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
-        public Byte[] avatar { get; set; }
-        
+        public User()
+        {
+            var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));
+
+            createdAt = now;
+            updatedAt = now;
+        }
+
+
     }
 }

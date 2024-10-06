@@ -23,9 +23,15 @@ namespace vehicle_insurance_backend.Controllers
 
         // GET: api/Messages
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Message>>> Getmessages()
+        public async Task<ActionResult<IEnumerable<Message>>> Getmessages([FromQuery] int? customersupportId)
         {
-            return await _context.messages.ToListAsync();
+            IQueryable<Message> query = _context.messages.AsQueryable();
+            if (customersupportId != null)
+            {
+                query = query.Where(m => m.customersupportId == customersupportId);
+            }
+            query = query.OrderBy(m => m.time);
+            return await query.ToListAsync();
         }
 
         // GET: api/Messages/5
