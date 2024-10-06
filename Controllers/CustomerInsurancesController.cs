@@ -28,6 +28,13 @@ namespace vehicle_insurance_backend.Controllers
             return await _context.customerInsurances.ToListAsync();
         }
 
+        // GET: api/CustomerInsurances/by-user/:id
+        [HttpGet("by-user/{id}")]
+        public async Task<ActionResult<IEnumerable<CustomerInsurance>>> GetcustomerInsurancesByUser(int id)
+        {
+            return await _context.customerInsurances.Include(ci => ci.Vehicle).Include(ci => ci.Insurance).Where(ci => ci.Vehicle.userId == id).ToListAsync();
+        }
+
         // GET: api/CustomerInsurances/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CustomerInsurance>> GetCustomerInsurance(int id)
