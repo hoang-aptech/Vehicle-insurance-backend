@@ -95,16 +95,34 @@ namespace vehicle_insurance_backend.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            var user = await _context.users.FindAsync(id);
-            if (user == null)
+            try
             {
-                return NotFound();
+                var user = await _context.users.FindAsync(id);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                _context.users.Remove(user);
+                await _context.SaveChangesAsync();
+
+                return NoContent();
             }
+            catch (DbUpdateException ex)
+            {
+                // Check if it's a foreign key constraint violation
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("foreign key constraint"))
+                {
+                    // Provide a user-friendly message with the affected tables
+                    return BadRequest(new
+                    {
+                        message = "Unable to delete the User because this User is associated with other data.",
+                        details = "This User is linked to Vehicle and customer support. Please remove or update the related data before deleting."
+                    });
+                }
 
-            _context.users.Remove(user);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+                return StatusCode(500, new { message = "An unexpected error occurred while deleting." });
+            }
         }
 
         private bool UserExists(int id)

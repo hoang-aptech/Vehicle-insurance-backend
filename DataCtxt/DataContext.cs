@@ -14,7 +14,17 @@ namespace vehicle_insurance_backend.DataCtxt
         public DbSet<Vehicle> vehicles { get; set; }
         public DbSet<New> news { get; set; }
         public DbSet<Message> messages { get; set; }
+        public DbSet<Insurancecontent> insurancecontents { get; set; }
+        public DbSet<InsurancePackage> insurancePackage { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
-    }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Customize table names
+            modelBuilder.Entity<InsurancePackage>().ToTable("insurancePackage");
+        }
+       }
 }
