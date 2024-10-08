@@ -145,7 +145,7 @@ namespace vehicle_insurance_backend.Controllers
             string vnp_Command = "pay";
             string vnp_TxnRef = insuranceId.ToString();
             string vnp_OrderInfo = $"Payment for insurance #{insuranceId}";
-            string vnp_Amount = (insurance.price * 100).ToString("F0");
+            //string vnp_Amount = (insurance.price * 100).ToString("F0");
             string vnp_CurrCode = "VND";
             string vnp_IpAddr = "127.0.0.1";
             string vnp_CreateDate = DateTime.Now.ToString("yyyyMMddHHmmss");
@@ -156,7 +156,7 @@ namespace vehicle_insurance_backend.Controllers
             // Tạo chuỗi truy vấn
             var queryData = new SortedList<string, string>
     {
-        { "vnp_Amount", vnp_Amount },
+        //{ "vnp_Amount", vnp_Amount },
         { "vnp_Command", vnp_Command },
         { "vnp_CreateDate", vnp_CreateDate },
         { "vnp_CurrCode", vnp_CurrCode },
