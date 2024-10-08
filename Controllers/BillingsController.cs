@@ -42,6 +42,13 @@ namespace vehicle_insurance_backend.Controllers
             return billing;
         }
 
+        // GET: api/Billings/by-user/:id
+        [HttpGet("by-user/{id}")]
+        public async Task<ActionResult<IEnumerable<Billing>>> GetBillingsByUser(int id)
+        {
+            return await _context.billings.Include(b => b.Vehicle).Include(b => b.InsurancePackage).Where(b => b.Vehicle.userId == id).ToListAsync();
+        }
+
         // PUT: api/Billings/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
