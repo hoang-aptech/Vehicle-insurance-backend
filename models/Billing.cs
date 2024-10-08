@@ -11,7 +11,7 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         [Column(TypeName = "decimal(18, 2)")]
-        public double price { get; set; }
+        public decimal price { get; set; }
 
         [Required]
         public DateTime startDate { get; set; }
