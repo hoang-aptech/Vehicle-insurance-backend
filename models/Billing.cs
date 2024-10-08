@@ -14,9 +14,17 @@ namespace vehicle_insurance_backend.models
         public double price { get; set; }
 
         [Required]
-        public int customerinsuranceId { get; set; }
-        public CustomerInsurance? CustomerInsurance { get; set; }
+        public DateTime startDate { get; set; }
 
+        [Required]
+        public DateTime expireDate { get; set; }
+
+        [Required]
+        public int vehicleId { get; set; }
+        public Vehicle? Vehicle { get; set; }
+        [Required]
+        public int InsurancePackageId { get; set; }
+        public InsurancePackage? InsurancePackage { get; set; }
 
         [Required]
         public Boolean deleted { get; set; }
