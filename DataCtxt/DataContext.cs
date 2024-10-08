@@ -8,7 +8,6 @@ namespace vehicle_insurance_backend.DataCtxt
         public DbSet<User> users { get; set; }
         public DbSet<Advertisement> advertisements { get; set; }
         public DbSet<Billing> billings { get; set; }
-        public DbSet<CustomerInsurance> customerInsurances { get; set; }
         public DbSet<CustomerSupport> customerSupports { get; set; }
         public DbSet<Insurance> insurances { get; set; }
         public DbSet<Vehicle> vehicles { get; set; }
@@ -21,10 +20,18 @@ namespace vehicle_insurance_backend.DataCtxt
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
             // Customize table names
             modelBuilder.Entity<InsurancePackage>().ToTable("insurancePackage");
+
+            modelBuilder.Entity<Billing>()
+                .Property(e => e.startDate)
+                .HasColumnType("date");
+
+            modelBuilder.Entity<Billing>()
+                .Property(e => e.expireDate)
+                .HasColumnType("date");
+
+            base.OnModelCreating(modelBuilder);
         }
        }
 }
