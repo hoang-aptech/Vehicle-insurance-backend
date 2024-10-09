@@ -21,9 +21,7 @@ namespace vehicle_insurance_backend.models
         [Required]
         [StringLength(255)]
         public string password { get; set; }
-
-        [Required]
-        public byte[] avatar { get; set; }
+        public byte[]? avatar { get; set; }
 
         [Required]
         public Boolean verified { get; set; }

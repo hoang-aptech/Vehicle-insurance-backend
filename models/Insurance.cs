@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace vehicle_insurance_backend.models
 {
@@ -34,6 +35,9 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         public DateTime updatedAt { get; set; }
+
+        [JsonIgnore]
+        public ICollection<InsurancePackage> InsurancePackages { get; set; }
 
         public Insurance()
         {

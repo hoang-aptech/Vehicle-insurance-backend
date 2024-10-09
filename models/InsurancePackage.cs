@@ -17,7 +17,7 @@ namespace vehicle_insurance_backend.models
 
         [Required]
         [Column(TypeName = "decimal(18, 2)")]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
         public int InsuranceId { get; set; }
 
