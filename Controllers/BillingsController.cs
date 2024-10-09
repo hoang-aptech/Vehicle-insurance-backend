@@ -46,7 +46,7 @@ namespace vehicle_insurance_backend.Controllers
         [HttpGet("by-user/{id}")]
         public async Task<ActionResult<IEnumerable<Billing>>> GetBillingsByUser(int id)
         {
-            return await _context.billings.Include(b => b.Vehicle).Include(b => b.InsurancePackage).Where(b => b.Vehicle.userId == id).ToListAsync();
+            return await _context.billings.Include(b => b.Vehicle).Include(b => b.InsurancePackage).ThenInclude(ip => ip.Insurance).Where(b => b.Vehicle.userId == id).ToListAsync();
         }
 
         // PUT: api/Billings/5
