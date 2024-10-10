@@ -11,6 +11,7 @@ using System.Web;
 using System.Net;
 using vehicle_insurance_backend.DataCtxt;
 using vehicle_insurance_backend.models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace vehicle_insurance_backend.Controllers
 {
@@ -50,6 +51,7 @@ namespace vehicle_insurance_backend.Controllers
 
 
         // GET: api/Insurances/5
+        [Authorize(Roles = "User")]
         [HttpGet("{id}")]
         public async Task<ActionResult<Insurance>> GetInsurance(int id)
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,12 +23,14 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // GET: api/CustomerSupports
+        [Authorize(Roles = "User")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CustomerSupport>>> GetcustomerSupports()
         {
             return await _context.customerSupports.ToListAsync();
         }
 
+        [Authorize(Roles = "User")]
         [HttpGet("by-user/{userId}")]
         public IActionResult GetCustomerSupportByUserId(int userId)
         {
@@ -101,6 +104,7 @@ namespace vehicle_insurance_backend.Controllers
 
         // POST: api/CustomerSupports
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "User")]
         [HttpPost]
         public async Task<ActionResult<CustomerSupport>> PostCustomerSupport(CustomerSupport customerSupport)
         {

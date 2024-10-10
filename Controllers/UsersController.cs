@@ -64,7 +64,7 @@ namespace vehicle_insurance_backend.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, user.id.ToString()),
-                new Claim(ClaimTypes.Role, user.Role == "Admin" ? "Admin" : user.Role == "Employee" ? "Employee" : "User") // Checking the `Role` property
+                new Claim(ClaimTypes.Role, user.Role == "Admin" ? "Admin" : user.Role == "Employee" ? "Employee" : "User")
             };
 
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -77,8 +77,6 @@ namespace vehicle_insurance_backend.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
-
-
 
         // GET: api/Users
         [HttpGet]
