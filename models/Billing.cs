@@ -10,13 +10,6 @@ namespace vehicle_insurance_backend.models
         public int id { get; set; }
 
         [Required]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal price { get; set; }
-
-        [Required]
-        public DateTime startDate { get; set; }
-
-        [Required]
         public DateTime expireDate { get; set; }
 
         [Required]

@@ -30,6 +30,13 @@ namespace vehicle_insurance_backend.Controllers
             _context = context;
         }
 
+        [HttpGet("root")]
+        public async Task<ActionResult<Insurance>> GetInsurancesRoot()
+        {
+            var insurances = await _context.insurances.ToListAsync();
+            return Ok(insurances);
+        }
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<InsuranceDTO>>> GetInsurances()
         {
@@ -186,7 +193,7 @@ namespace vehicle_insurance_backend.Controllers
             vnp.AddRequestData("vnp_Version", "2.1.0");
             vnp.AddRequestData("vnp_Command", "pay");
             vnp.AddRequestData("vnp_TmnCode", _vnp_TmnCode);
-            vnp.AddRequestData("vnp_Amount", ((int)(price * 100000)).ToString());
+            vnp.AddRequestData("vnp_Amount", ((int)(price * 25000)).ToString());
             vnp.AddRequestData("vnp_CurrCode", "VND");
 
             string txnRef = $"{insurancePackageId}_{DateTime.Now.Ticks}";
@@ -203,7 +210,7 @@ namespace vehicle_insurance_backend.Controllers
             return Ok(new { paymentUrl });
         }
         [HttpGet("payment-success")]
-        public IActionResult PaymentSuccess(string vnp_TxnRef, string vnp_ResponseCode, string vnp_OrderInfo)
+        /* public IActionResult PaymentSuccess(string vnp_TxnRef, string vnp_ResponseCode, string vnp_OrderInfo)
         {
             if (string.IsNullOrEmpty(vnp_TxnRef) || string.IsNullOrEmpty(vnp_ResponseCode) || string.IsNullOrEmpty(vnp_OrderInfo))
             {
@@ -259,7 +266,7 @@ namespace vehicle_insurance_backend.Controllers
             {
                 return BadRequest(new { message = "Payment failed." });
             }
-        }
+        } */
 
 
         private bool InsuranceExists(int id)

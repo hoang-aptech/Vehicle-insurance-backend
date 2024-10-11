@@ -24,10 +24,6 @@ namespace vehicle_insurance_backend.DataCtxt
             modelBuilder.Entity<InsurancePackage>().ToTable("insurancePackage");
 
             modelBuilder.Entity<Billing>()
-                .Property(e => e.startDate)
-                .HasColumnType("date");
-
-            modelBuilder.Entity<Billing>()
                 .Property(e => e.expireDate)
                 .HasColumnType("date");
 
