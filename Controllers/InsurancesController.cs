@@ -210,12 +210,13 @@ namespace vehicle_insurance_backend.Controllers
             return Ok(new { paymentUrl });
         }
         [HttpGet("payment-success")]
-        /* public IActionResult PaymentSuccess(string vnp_TxnRef, string vnp_ResponseCode, string vnp_OrderInfo)
+        public IActionResult PaymentSuccess(string vnp_TxnRef, string vnp_ResponseCode, string vnp_OrderInfo)
         {
             if (string.IsNullOrEmpty(vnp_TxnRef) || string.IsNullOrEmpty(vnp_ResponseCode) || string.IsNullOrEmpty(vnp_OrderInfo))
             {
                 return BadRequest(new { message = "Transaction Reference, Response Code, and Order Info are required." });
             }
+
             if (vnp_ResponseCode == "00")
             {
                 var orderInfoParts = vnp_OrderInfo.Split('#');
@@ -223,6 +224,7 @@ namespace vehicle_insurance_backend.Controllers
                 {
                     return BadRequest(new { message = "Invalid insurance package ID in order info." });
                 }
+
                 var insurancePackage = _context.insurancePackage
                     .FirstOrDefault(p => p.Id == insurancePackageId && !p.deleted);
 
@@ -232,31 +234,48 @@ namespace vehicle_insurance_backend.Controllers
                 }
 
                 var existingBilling = _context.billings
-                    .FirstOrDefault(b => b.InsurancePackageId == insurancePackageId
-                                         && b.price == insurancePackage.Price
-                                         && !b.deleted);
+                    .FirstOrDefault(b => b.InsurancePackageId == insurancePackageId && !b.deleted);
+
+                Billing billing;
+                DateTime oldExpireDate = DateTime.MinValue;
+
                 if (existingBilling != null)
                 {
-                    return Ok(new { message = "Payment successful, but billing record already exists." });
+                    oldExpireDate = existingBilling.expireDate;
+                    existingBilling.expireDate = existingBilling.expireDate.AddMonths(insurancePackage.Duration);
+                    existingBilling.updatedAt = DateTime.Now;
+                    billing = existingBilling;
+                    _context.billings.Update(existingBilling);
+                }
+                else
+                {
+                    billing = new Billing
+                    {
+                        InsurancePackageId = insurancePackageId,
+                        expireDate = DateTime.Today.AddMonths(insurancePackage.Duration),
+                        vehicleId = 1,
+                        deleted = false,
+                        createdAt = DateTime.Now,
+                        updatedAt = DateTime.Now
+                    };
+
+                    _context.billings.Add(billing);
                 }
 
-                // Set the billing information
-                var billing = new Billing
-                {
-                    price = insurancePackage.Price,
-                    startDate = DateTime.Today,
-                    expireDate = DateTime.Today.AddMonths(insurancePackage.Duration),
-                    vehicleId = 1,
-                    InsurancePackageId = insurancePackageId,
-                    deleted = false,
-                    createdAt = DateTime.Now,
-                    updatedAt = DateTime.Now
-                };
-
-                _context.billings.Add(billing);
                 _context.SaveChanges();
 
-                return Ok(new { message = "Payment successful and billing record created." });
+                var transaction = new Transaction
+                {
+                    BillingId = billing.id,
+                    Price = insurancePackage.Price,
+                    OldExpiredDate = oldExpireDate != DateTime.MinValue ? oldExpireDate : billing.expireDate, 
+                    CreatedAt = DateTime.Now
+                };
+
+                _context.transactions.Add(transaction);
+                _context.SaveChanges();
+
+                return Ok(new { message = "Payment successful, billing and transaction records updated." });
             }
             else if (vnp_ResponseCode == "24")
             {
@@ -266,7 +285,8 @@ namespace vehicle_insurance_backend.Controllers
             {
                 return BadRequest(new { message = "Payment failed." });
             }
-        } */
+        }
+
 
 
         private bool InsuranceExists(int id)
