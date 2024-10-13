@@ -43,12 +43,20 @@ namespace vehicle_insurance_backend.Controllers
             return billing;
         }
 
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User, Employee")]
         // GET: api/Billings/by-user/:id
         [HttpGet("by-user/{id}")]
         public async Task<ActionResult<IEnumerable<Billing>>> GetBillingsByUser(int id)
         {
             return await _context.billings.Include(b => b.Vehicle).Include(b => b.InsurancePackage).ThenInclude(ip => ip.Insurance).Where(b => b.Vehicle.userId == id).ToListAsync();
+        }
+
+        [Authorize(Roles = "User, Employee")]
+        // GET: api/Billings/transactions/:id
+        [HttpGet("transactions/{id}")]
+        public async Task<ActionResult<IEnumerable<Transaction>>> GetTransactions(int id)
+        {
+            return await _context.Transactions.Where(t => t.BillingId == id).ToListAsync();
         }
 
         // PUT: api/Billings/5

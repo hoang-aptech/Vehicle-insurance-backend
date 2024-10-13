@@ -11,8 +11,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using vehicle_insurance_backend.Controllers.FormModels;
 using vehicle_insurance_backend.DataCtxt;
+using vehicle_insurance_backend.FormModels;
 using vehicle_insurance_backend.models;
 
 namespace vehicle_insurance_backend.Controllers
@@ -31,10 +31,10 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("authenticate")]
-        public async Task<IActionResult> Authenticate([FromBody] UserAuth model)
+        [HttpPost("authenticate/{type}")]
+        public async Task<IActionResult> Authenticate([FromBody] UserAuth model, string type)
         {
-            var user = await AuthenticateUserAsync(model.Username);
+            var user = await AuthenticateUserAsync(model.Username, type);
 
             if (user != null)
             {
@@ -49,9 +49,9 @@ namespace vehicle_insurance_backend.Controllers
             return Unauthorized();
         }
 
-        private async Task<User> AuthenticateUserAsync(string username)
+        private async Task<User> AuthenticateUserAsync(string username, string type)
         {
-            var user = await _context.users.FirstOrDefaultAsync(u => u.username == username);
+            var user = await _context.users.FirstOrDefaultAsync(u => u.username == username && (u.Role == type || u.Role == "Employee") && u.deleted == false);
             return user;
         }
 
@@ -82,7 +82,7 @@ namespace vehicle_insurance_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> Getusers()
         {
-            return await _context.users.ToListAsync();
+            return await _context.users.Where(u => u.deleted == false).ToListAsync();
         }
 
         // GET: api/Users/deleted
@@ -133,6 +133,23 @@ namespace vehicle_insurance_backend.Controllers
                     throw;
                 }
             }
+
+            return NoContent();
+        }
+
+        // PATCH: api/Users/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Admin")]
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchUser(int id, [FromBody] PatchUserDTO patchUserDto)
+        {
+            var user = _context.users.Find(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            user.deleted = patchUserDto.Deleted;
+            await _context.SaveChangesAsync();
 
             return NoContent();
         }

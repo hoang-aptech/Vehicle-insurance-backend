@@ -1,4 +1,4 @@
-﻿namespace vehicle_insurance_backend.Controllers.FormModels
+﻿namespace vehicle_insurance_backend.FormModels
 {
     public class UserAuth
     {

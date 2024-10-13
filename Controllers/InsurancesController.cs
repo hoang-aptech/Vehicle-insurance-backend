@@ -58,7 +58,6 @@ namespace vehicle_insurance_backend.Controllers
 
 
         // GET: api/Insurances/5
-        [Authorize(Roles = "User")]
         [HttpGet("{id}")]
         public async Task<ActionResult<Insurance>> GetInsurance(int id)
         {
@@ -147,11 +146,16 @@ namespace vehicle_insurance_backend.Controllers
         [HttpGet("type/{type}")]
         public async Task<ActionResult<IEnumerable<object>>> GetInsuranceByType(string type)
         {
-            if (type != "Car" && type != "Motorbike")
+            // Define valid insurance types
+            var validTypes = new HashSet<string> { "Car", "Motorbike", "Bike", "E-bike", "Taxi", "Truck" };
+
+            // Validate the insurance type
+            if (!validTypes.Contains(type))
             {
                 return BadRequest("Invalid insurance type.");
             }
 
+            // Query the database
             var insurances = await _context.insurances
                 .Where(i => i.type == type)
                 .Join(
@@ -161,18 +165,21 @@ namespace vehicle_insurance_backend.Controllers
                     (insurance, insurancePackage) => new
                     {
                         insurance.name,
+                        packageName = insurancePackage.Name, // No need for quotes
                         insurance.description,
                         insurancePackage.Price
                     })
                 .ToListAsync();
 
-            if (insurances == null || !insurances.Any())
+            // Check if any insurance packages were found
+            if (!insurances.Any())
             {
                 return NotFound("No insurance packages found for this type.");
             }
 
             return Ok(insurances);
         }
+
 
 
         [HttpGet("pay/{insurancePackageId}")]

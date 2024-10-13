@@ -16,7 +16,7 @@ namespace vehicle_insurance_backend.models
         [Required]
         public string description { get; set; }
 
-        public byte[] image_path { get; set; }
+        public byte[] image { get; set; }
 
         [Required]
         public Boolean deleted { get; set; }

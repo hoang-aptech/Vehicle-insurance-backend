@@ -15,6 +15,7 @@ namespace vehicle_insurance_backend.DataCtxt
         public DbSet<Message> messages { get; set; }
         public DbSet<Insurancecontent> insurancecontents { get; set; }
         public DbSet<InsurancePackage> insurancePackage { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 

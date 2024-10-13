@@ -28,6 +28,13 @@ namespace vehicle_insurance_backend.Controllers
             return await _context.news.ToListAsync();
         }
 
+        // GET: api/News/Related
+        [HttpGet("Related")]
+        public async Task<ActionResult<IEnumerable<New>>> GetnewsRelated()
+        {
+            return await _context.news.OrderBy(n => EF.Functions.Random()).Take(3).ToListAsync();
+        }
+
         // GET:api/News/deleted
         [HttpGet("deleted")]
         public async Task<ActionResult<IEnumerable<New>>> GetnewsDeleted()
