@@ -23,7 +23,7 @@ namespace vehicle_insurance_backend.Controllers
         private readonly string _vnp_HashSecret = "PTXMZDA3D5UDEB18N594AEN0ZSH00ALV";
         private readonly string _vnp_TmnCode = "XCC3PNU2";
         private readonly string _vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-        private readonly string _vnp_ReturnUrl = "http://localhost:3000/payment-success";
+        private readonly string _vnp_ReturnUrl = "http://localhost:3000/contract-list";
 
         public InsurancesController(DataContext context)
         {
@@ -275,7 +275,7 @@ namespace vehicle_insurance_backend.Controllers
                 {
                     BillingId = billing.id,
                     Price = insurancePackage.Price,
-                    OldExpiredDate = oldExpireDate != DateTime.MinValue ? oldExpireDate : billing.expireDate, 
+                    OldExpiredDate = oldExpireDate != DateTime.MinValue ? oldExpireDate : null, 
                     CreatedAt = DateTime.Now
                 };
 
