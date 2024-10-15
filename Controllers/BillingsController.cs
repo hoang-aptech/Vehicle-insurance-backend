@@ -56,7 +56,7 @@ namespace vehicle_insurance_backend.Controllers
         [HttpGet("transactions/{id}")]
         public async Task<ActionResult<IEnumerable<Transaction>>> GetTransactions(int id)
         {
-            return await _context.Transactions.Where(t => t.BillingId == id).ToListAsync();
+            return await _context.transactions.Where(t => t.BillingId == id).ToListAsync();
         }
 
         // PUT: api/Billings/5

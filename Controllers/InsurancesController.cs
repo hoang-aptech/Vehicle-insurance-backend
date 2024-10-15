@@ -200,7 +200,7 @@ namespace vehicle_insurance_backend.Controllers
             vnp.AddRequestData("vnp_Version", "2.1.0");
             vnp.AddRequestData("vnp_Command", "pay");
             vnp.AddRequestData("vnp_TmnCode", _vnp_TmnCode);
-            vnp.AddRequestData("vnp_Amount", ((int)(price * 25000)).ToString());
+            vnp.AddRequestData("vnp_Amount", ((int)(price * 2500000)).ToString());
             vnp.AddRequestData("vnp_CurrCode", "VND");
 
             string txnRef = $"{insurancePackageId}_{DateTime.Now.Ticks}";
@@ -217,7 +217,7 @@ namespace vehicle_insurance_backend.Controllers
             return Ok(new { paymentUrl });
         }
         [HttpGet("payment-success")]
-        public IActionResult PaymentSuccess(string vnp_TxnRef, string vnp_ResponseCode, string vnp_OrderInfo)
+        public IActionResult PaymentSuccess(string vnp_TxnRef, string vnp_ResponseCode, string vnp_OrderInfo, string vehicleId)
         {
             if (string.IsNullOrEmpty(vnp_TxnRef) || string.IsNullOrEmpty(vnp_ResponseCode) || string.IsNullOrEmpty(vnp_OrderInfo))
             {
@@ -260,7 +260,7 @@ namespace vehicle_insurance_backend.Controllers
                     {
                         InsurancePackageId = insurancePackageId,
                         expireDate = DateTime.Today.AddMonths(insurancePackage.Duration),
-                        vehicleId = 1,
+                        vehicleId = int.Parse(vehicleId),
                         deleted = false,
                         createdAt = DateTime.Now,
                         updatedAt = DateTime.Now

@@ -30,7 +30,7 @@ namespace vehicle_insurance_backend.Controllers
             return await _context.customerSupports.ToListAsync();
         }
 
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User, Employee")]
         [HttpGet("by-user/{userId}")]
         public IActionResult GetCustomerSupportByUserId(int userId)
         {

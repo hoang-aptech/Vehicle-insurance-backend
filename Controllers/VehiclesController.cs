@@ -44,7 +44,7 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // GET: api/Vehicles/5`
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User, Employee")]
         [HttpGet("by-user/{id}")]
         public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicleByUser(int id)
         {
