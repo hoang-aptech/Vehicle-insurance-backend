@@ -28,7 +28,7 @@ namespace vehicle_insurance_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Billing>>> Getbillings()
         {
-            return await _context.billings.Include(b => b.Vehicle).Include(b => b.InsurancePackage).ToListAsync();
+            return await _context.billings.Include(b => b.Vehicle).ThenInclude(v => v.User).Include(b => b.InsurancePackage).ToListAsync();
         }
 
         // GET: api/Billings/5
