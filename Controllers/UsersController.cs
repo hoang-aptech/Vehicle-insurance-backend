@@ -79,6 +79,7 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // GET: api/Users
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> Getusers()
         {
@@ -86,6 +87,7 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // GET: api/Users/deleted
+        [Authorize(Roles = "Admin")]
         [HttpGet("deleted")]
         public async Task<ActionResult<IEnumerable<User>>> GetusersDeleted()
         {
@@ -93,6 +95,7 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // GET: api/Users/5
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
@@ -108,6 +111,7 @@ namespace vehicle_insurance_backend.Controllers
 
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
@@ -156,6 +160,7 @@ namespace vehicle_insurance_backend.Controllers
 
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
@@ -173,6 +178,7 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // DELETE: api/Users/5
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {

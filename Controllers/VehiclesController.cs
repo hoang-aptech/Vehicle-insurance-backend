@@ -23,10 +23,11 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // GET: api/Vehicles
+        [Authorize(Roles = "Employee, Admin")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vehicle>>> Getvehicles()
         {
-            return await _context.vehicles.ToListAsync();
+            return await _context.vehicles.Include(v => v.User).ToListAsync();
         }
 
         // GET: api/Vehicles/5

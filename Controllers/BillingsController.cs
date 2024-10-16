@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using vehicle_insurance_backend.DataCtxt;
+using vehicle_insurance_backend.FormModels;
 using vehicle_insurance_backend.models;
 
 namespace vehicle_insurance_backend.Controllers
@@ -23,10 +24,11 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // GET: api/Billings
+        [Authorize(Roles = "Admin, Employee")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Billing>>> Getbillings()
         {
-            return await _context.billings.ToListAsync();
+            return await _context.billings.Include(b => b.Vehicle).Include(b => b.InsurancePackage).ToListAsync();
         }
 
         // GET: api/Billings/5
@@ -90,8 +92,30 @@ namespace vehicle_insurance_backend.Controllers
             return NoContent();
         }
 
+        // PACTH: api/Billings/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Admin, Employee")]
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchBilling(int id, [FromBody] PatchBillingDTO patchBillingDTO)
+        {
+            var billing = await _context.billings.FindAsync(id); // FindAsync for async operation
+
+            if (billing == null)
+            {
+                return NotFound(); // Handle case where billing doesn't exist
+            }
+
+            billing.expireDate = patchBillingDTO.expireDate;
+
+            await _context.SaveChangesAsync(); // Ensure asynchronous save
+
+            return Ok(); // Return Ok status to indicate success
+        }
+
+
         // POST: api/Billings
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Admin, Employee")]
         [HttpPost]
         public async Task<ActionResult<Billing>> PostBilling(Billing billing)
         {

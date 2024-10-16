@@ -36,9 +36,6 @@ namespace vehicle_insurance_backend.models
         [Required]
         public DateTime updatedAt { get; set; }
 
-        [JsonIgnore]
-        public ICollection<InsurancePackage> InsurancePackages { get; set; }
-
         public Insurance()
         {
             var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time"));

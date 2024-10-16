@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // GET: api/InsurancePackages
+        [Authorize(Roles = "Employee, Admin")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<InsurancePackage>>> GetinsurancePackages()
         {

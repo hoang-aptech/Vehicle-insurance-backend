@@ -5,6 +5,7 @@ using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using vehicle_insurance_backend.DataCtxt;
+using Microsoft.AspNetCore.Authorization;
 
 namespace vehicle_insurance_backend.Controllers
 {
@@ -24,6 +25,14 @@ namespace vehicle_insurance_backend.Controllers
         public async Task<ActionResult<IEnumerable<Transaction>>> GetTransactions()
         {
             return await _context.transactions.ToListAsync();
+        }
+
+        // GET: api/Transactions/by-billingId/1
+        [Authorize(Roles = "Admin, Employee")]
+        [HttpGet("by-billingId/{id}")]
+        public async Task<ActionResult<IEnumerable<Transaction>>> GetTransactionsByBillingId(int id)
+        {
+            return await _context.transactions.Where(t => t.BillingId == id).ToListAsync();
         }
 
         // GET: api/Transactions/5

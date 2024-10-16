@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using vehicle_insurance_backend.DataCtxt;
@@ -85,6 +81,7 @@ namespace vehicle_insurance_backend.Controllers
         }
 
         // DELETE: api/Advertisements/5
+        [Authorize(Roles = "Employee, Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAdvertisement(int id)
         {
