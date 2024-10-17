@@ -30,24 +30,35 @@ namespace vehicle_insurance_backend.Controllers
             return await _context.customerSupports.ToListAsync();
         }
 
-        [Authorize(Roles = "User, Employee")]
-        [HttpGet("by-user/{userId}")]
-        public IActionResult GetCustomerSupportByUserId(int userId)
+        [Authorize(Roles = "User, Employee, Admin")]
+        [HttpGet("by-role")]
+        public IActionResult GetCustomerSupportByUserId([FromQuery] int? userId, [FromQuery] int? employeeId)
         {
             var query = _context.customerSupports
                 .Include(cs => cs.vehicle)
-                .ThenInclude(v => v.User)
-                .Where(cs => cs.vehicle.userId == userId).Select(cs => new
+                .ThenInclude(v => v.User).AsQueryable();
+
+            if (userId != null)
+            {
+                query = query.Where(cs => cs.vehicle.userId == userId);
+            }
+            else if (employeeId != null)
+            {
+                query = query.Where(cs => cs.userId == employeeId);
+            }
+
+            var customerSupports = query.Select(cs => new
                 {
                     Id = cs.id,
+                    CustomerName = cs.vehicle.User.fullname,
+                    CustomerPhone = cs.vehicle.User.phone,
+                    CustomerVehicle = cs.vehicle.name,
                     Type = cs.type,
                     Description = cs.description,
                     Place = cs.place,
                     VehicleName = cs.vehicle.name,
                     CreatedAt = cs.createdAt,
-                });
-
-            var customerSupports = query.ToList();
+                }).ToList();
 
             if (customerSupports == null || !customerSupports.Any())
             {
