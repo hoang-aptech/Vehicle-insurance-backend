@@ -26,9 +26,16 @@ namespace vehicle_insurance_backend.Controllers
         // GET: api/Billings
         [Authorize(Roles = "Admin, Employee")]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Billing>>> Getbillings()
+        public async Task<ActionResult<IEnumerable<Billing>>> GetBillings()
         {
-            return await _context.billings.Include(b => b.Vehicle).ThenInclude(v => v.User).Include(b => b.InsurancePackage).ToListAsync();
+            var billings = await _context.billings
+                .Include(b => b.Vehicle)
+                .ThenInclude(v => v.User)
+                .Include(b => b.InsurancePackage)
+                .Where(b => !b.deleted)
+                .ToListAsync();
+
+            return billings;
         }
 
         // GET: api/Billings/5
