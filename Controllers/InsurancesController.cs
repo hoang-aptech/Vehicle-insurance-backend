@@ -200,7 +200,7 @@ namespace vehicle_insurance_backend.Controllers
             vnp.AddRequestData("vnp_Version", "2.1.0");
             vnp.AddRequestData("vnp_Command", "pay");
             vnp.AddRequestData("vnp_TmnCode", _vnp_TmnCode);
-            vnp.AddRequestData("vnp_Amount", ((int)(price * 2500000)).ToString());
+            vnp.AddRequestData("vnp_Amount", ((long)(price * 2500000)).ToString());
             vnp.AddRequestData("vnp_CurrCode", "VND");
 
             string txnRef = $"{insurancePackageId}_{DateTime.Now.Ticks}";

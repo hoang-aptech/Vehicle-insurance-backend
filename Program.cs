@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -13,6 +14,7 @@ namespace vehicle_insurance_backend
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.WebHost.UseUrls("http://*:5000");
             var connectionString = builder.Configuration.GetConnectionString("Sem3Conn");
 
             builder.Services.AddSignalR();
@@ -74,7 +76,7 @@ namespace vehicle_insurance_backend
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                    builder.WithOrigins("http://localhost:3000", "http://192.168.1.54").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
                 });
             });
 
@@ -88,7 +90,7 @@ namespace vehicle_insurance_backend
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseCors();
 

@@ -22,7 +22,15 @@ namespace vehicle_insurance_backend.DataCtxt
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Customize table names
-            modelBuilder.Entity<InsurancePackage>().ToTable("insurancePackage");
+            modelBuilder.Entity<InsurancePackage>().ToTable("insurancepackage");
+            modelBuilder.Entity<Advertisement>().ToTable("advertisement");
+            modelBuilder.Entity<Billing>().ToTable("billing");
+            modelBuilder.Entity<CustomerSupport>().ToTable("customersupport");
+            modelBuilder.Entity<Insurance>().ToTable("insurance");
+            modelBuilder.Entity<New>().ToTable("new");
+            modelBuilder.Entity<User>().ToTable("user");
+            modelBuilder.Entity<Vehicle>().ToTable("vehicle");
+
 
             modelBuilder.Entity<Billing>()
                 .Property(e => e.expireDate)
