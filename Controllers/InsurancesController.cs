@@ -241,7 +241,7 @@ namespace vehicle_insurance_backend.Controllers
                 }
 
                 var existingBilling = _context.billings
-                    .FirstOrDefault(b => b.InsurancePackageId == insurancePackageId && !b.deleted);
+                    .FirstOrDefault(b => b.InsurancePackageId == insurancePackageId && b.vehicleId == int.Parse(vehicleId) && !b.deleted);
 
                 Billing billing;
                 DateTime oldExpireDate = DateTime.MinValue;

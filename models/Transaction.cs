@@ -9,7 +9,7 @@ namespace vehicle_insurance_backend.models
         public int BillingId { get; set; }
         public Billing? Billing { get; set; }
         [Required]
-        [Column(TypeName = "decimal(18, 2)")]
+        [Column(TypeName = "decimal(22, 2)")]
         public decimal Price { get; set; }
         public DateTime? OldExpiredDate { get; set; }
 
